@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	  <meta name="theme-color" content="#0a0b1a">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statesman Coaches | Secure Mobility & Transport</title>
+    <!-- UPDATED TITLE -->
+    <title>Statesman Coaches | Premier Luxury Transportation & Executive Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -653,7 +655,7 @@
             .hero p { font-size: 1.1rem; }
             .section-header h2, .about-content h2, .cta h2 { font-size: 2.6rem; }
             .testimonial-card { padding: 50px 40px; }
-            #fleet .vehicle-features { grid-template-columns: 1fr; }
+            #fleet .vehicle-features { grid-template-columns: 1fr; } /* This might need adjustment based on content */
         }
 
         @media (max-width: 768px) {
@@ -805,7 +807,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#fleet">Fleet</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Us</a></li> <!-- Changed from About -->
                 <li><a href="#testimonials">Clients</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -822,17 +824,6 @@
     </header>
 
     <section id="home" class="hero">
-        <!--
-            MODIFICATION: Added the poster="videoplaceholder.jpg" attribute.
-            - This image will show initially while the video loads.
-            - If the video source ('hero.mp4') fails to load or the browser
-              doesn't support mp4, the poster image should remain visible.
-            - The CSS styles applied to #hero-video (like object-fit: cover,
-              positioning, etc.) will also apply to the poster image, making
-              it resize and behave identically.
-            - The fallback text "Your browser does not support..." is a final
-              fallback if the browser doesn't understand the <video> tag itself.
-        -->
         <video autoplay="" loop="" muted="" playsinline="" id="hero-video" poster="videoplaceholder.jpg">
             <source src="hero.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -840,11 +831,13 @@
         <div class="hero-overlay"></div>
         <div class="container" id="hero-container" style="padding-top: 95px;"> <!-- Initial desktop padding -->
             <div class="hero-content">
-                <h1>Secure Mobility. Elevated Experiences.</h1>
-                <p>Pioneering the future of executive protection and luxury transportation with integrated security and unparalleled service.</p>
+                <!-- UPDATED HERO CONTENT -->
+                <h1>The Benchmark in Luxury Transportation</h1>
+                <p>Experience unparalleled service, punctuality, and professionalism. We provide exquisite journeys, seamlessly integrated with discreet, expert security for complete peace of mind.</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn">Explore Services</a>
-                    <a href="#contact" class="btn btn-outline">Request Access</a>
+                    <a href="#services" class="btn">Explore Our Services</a>
+                    <!-- UPDATED BUTTON TEXT -->
+                    <a href="#contact" class="btn btn-outline">Request a Quote</a>
                 </div>
             </div>
         </div>
@@ -853,41 +846,46 @@
     <section id="services" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Core Capabilities</h2>
+                <!-- UPDATED SECTION HEADER -->
+                <h2>Our Signature Services</h2>
                 <div class="section-divider"></div>
-                <p>Discrete solutions designed for complex security challenges and sophisticated travel requirements.</p>
+                <p>Exceeding expectations with every journey. Discover our suite of premium transportation and integrated security services, tailored for discerning clientele.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Executive+Protection\')'"></div>
-                    <div class="service-content">
-                        <h3>Executive Protection</h3>
-                        <p>Adaptive, intelligence-led security details for high-profile individuals operating in dynamic environments.</p>
-                        <a href="#contact" class="learn-more">Details <span>→</span></a>
-                    </div>
-                </div>
-                <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1591088843076-756576c19d62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Luxury+Transport\')'"></div>
                     <div class="service-content">
-                        <h3>Luxury Transportation</h3>
-                        <p>Secure, seamless journeys in our state-of-the-art fleet, managed by highly trained professionals.</p>
-                        <a href="#fleet" class="learn-more">View Fleet <span>→</span></a>
+                        <!-- UPDATED SERVICE CARD (Luxury Transport First) -->
+                        <h3>Premier Luxury Transportation</h3>
+                        <p>Travel in unparalleled comfort and style. Our premium fleet and professional, punctual chauffeurs guarantee a flawless, reliable experience, every time.</p>
+                        <a href="#fleet" class="learn-more">View Our Fleet <span>→</span></a>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Event+Security\')'"></div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Executive+Protection\')'"></div>
                     <div class="service-content">
-                        <h3>Secure Events</h3>
-                        <p>Comprehensive risk assessment, planning, and execution for high-stakes corporate and private events.</p>
-                        <a href="#contact" class="learn-more">Details <span>→</span></a>
+                        <!-- UPDATED SERVICE CARD (Executive Protection) -->
+                        <h3>Integrated Executive Security</h3>
+                        <p>Discreet, personalized security solutions providing peace of mind, expertly woven into your travel arrangements for seamless protection.</p>
+                        <a href="#contact" class="learn-more">Learn More <span>→</span></a>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Corporate+Travel\')'"></div>
                     <div class="service-content">
-                        <h3>Corporate Solutions</h3>
-                        <p>Reliable, secure mobility management for executive teams, roadshows, and critical business travel.</p>
-                        <a href="#contact" class="learn-more">Details <span>→</span></a>
+                         <!-- UPDATED SERVICE CARD (Corporate Travel) -->
+                        <h3>Executive & Corporate Travel</h3>
+                        <p>Punctual, reliable, and sophisticated transportation management for executive teams, roadshows, airport transfers, and critical corporate needs.</p>
+                        <a href="#contact" class="learn-more">Discuss Solutions <span>→</span></a>
+                    </div>
+                </div>
+                 <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Event+Transport\')'"></div>
+                    <div class="service-content">
+                        <!-- UPDATED SERVICE CARD (Events) -->
+                        <h3>Special Event Transportation</h3>
+                        <p>Seamless, elegant transportation logistics and optional discreet security coordination for exclusive corporate gatherings, weddings, and private events.</p>
+                        <a href="#contact" class="learn-more">Plan Your Event <span>→</span></a>
                     </div>
                 </div>
             </div>
@@ -897,33 +895,33 @@
     <section id="fleet" class="section fleet"> <!-- Background color applied via CSS -->
         <div class="container">
             <div class="section-header">
-                <h2>Advanced Fleet</h2> <!-- Text color adjusted via CSS -->
+                <!-- UPDATED SECTION HEADER -->
+                <h2>Our Exquisite Fleet</h2> <!-- Text color adjusted via CSS -->
                 <div class="section-divider"></div> <!-- Color adjusted via CSS -->
-                <p>Engineered for security, designed for comfort. Our fleet represents the pinnacle of protected mobility.</p> <!-- Text color adjusted via CSS -->
+                <p>Discover vehicles where luxury meets sophistication. Each meticulously maintained and appointed for your ultimate comfort, safety, and style.</p> <!-- Text color adjusted via CSS -->
             </div>
             <div class="fleet-grid">
                 <div class="vehicle-card"> <!-- Card style adjusted via CSS -->
                      <div class="vehicle-img" style="background-image: url('https://images.unsplash.com/photo-1617097479819-8065d9b59e5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=GMC+Denali\')'"></div>
                     <div class="vehicle-content">
                         <h3>GMC Yukon Denali XL</h3> <!-- Text color adjusted via CSS -->
-                        <p>Experience luxury and comfort in our Denali, featuring:</p> <!-- Text color adjusted via CSS -->
-                        <!-- ===== START DENALI FEATURES UPDATE (with icons) ===== -->
+                        <!-- UPDATED DESCRIPTION -->
+                        <p>Spacious elegance and premium amenities define the Denali XL experience, perfect for executive travel or small groups seeking comfort.</p> <!-- Text color adjusted via CSS -->
                         <ul class="vehicle-features">
                             <li><i class="fas fa-couch"></i> Premium leather seating</li>
                             <li><i class="fas fa-expand-arrows-alt"></i> Extra-large cabin space</li>
                             <li><i class="fas fa-user-tie"></i> Captain’s chairs for maximum comfort</li>
                             <li><i class="fas fa-tv"></i> Two built-in TVs for on-the-go entertainment</li>
-                            <li><i class="fas fa-users"></i> Seats up to 6 passengers</li>
+                            <li><i class="fas fa-users"></i> Seats up to 6 passengers comfortably</li>
                         </ul>
-                        <!-- ===== END DENALI FEATURES UPDATE ===== -->
                     </div>
                 </div>
                 <div class="vehicle-card"> <!-- Card style adjusted via CSS -->
                      <div class="vehicle-img" style="background-image: url('https://images.unsplash.com/photo-1618843903139-51f6e7c03c69?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Mercedes+Sprinter\')'"></div>
                     <div class="vehicle-content">
                         <h3>Mercedes-Benz Sprinter</h3> <!-- Text color adjusted via CSS -->
-                        <p>Our fully equipped Sprinter offers a premium ride with high-end features:</p> <!-- Text color adjusted via CSS -->
-                        <!-- ===== START SPRINTER FEATURES UPDATE (with icons) ===== -->
+                        <!-- UPDATED DESCRIPTION -->
+                        <p>The ultimate mobile lounge experience. Our fully equipped Sprinter offers high-end features for entertainment, relaxation, or productivity on the move.</p> <!-- Text color adjusted via CSS -->
                         <ul class="vehicle-features">
                             <li><i class="fas fa-volume-up"></i> JL Audio surround sound system with 10” subwoofer</li>
                             <li><i class="fas fa-couch"></i> Plush leather seating for ultimate comfort</li>
@@ -932,7 +930,6 @@
                             <li><i class="fas fa-plug"></i> Tailgate hookups for generator power</li>
                             <li><i class="fas fa-lightbulb"></i> Multi-color ambient lighting system</li>
                         </ul>
-                        <!-- ===== END SPRINTER FEATURES UPDATE ===== -->
                     </div>
                 </div>
             </div>
@@ -943,18 +940,21 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <h2>The Statesman Protocol</h2>
+                    <!-- UPDATED ABOUT SECTION -->
+                    <h2>The Statesman Standard of Excellence</h2>
                     <div class="about-divider"></div>
-                    <p>Founded on principles of absolute discretion and operational excellence, Statesman Coaches leverages 15+ years of experience in high-threat environments and complex logistical challenges.</p>
-                    <p>Our team integrates former elite military, intelligence, and law enforcement personnel with advanced technology to deliver proactive security and sophisticated transportation solutions globally.</p>
+                    <p>Built on a foundation of absolute discretion, unwavering reliability, and operational excellence. Statesman Coaches is dedicated to delivering truly premium transportation experiences.</p>
+                    <p>Our professional team combines meticulous attention to detail with a commitment to punctuality and safety, ensuring every journey is seamless and sophisticated. While leveraging expertise in security logistics, our primary focus is your comfort and satisfaction.</p>
                     <div class="stats-grid">
-                        <div class="stat-item"> <div class="stat-number">15+</div> <div class="stat-label">Years Deployed</div> </div>
-                        <div class="stat-item"> <div class="stat-number">500+</div> <div class="stat-label">Client Profiles</div> </div>
-                        <div class="stat-item"> <div class="stat-number">99.9%</div> <div class="stat-label">Mission Success</div> </div>
+                        <!-- Stats updated to reflect service focus where applicable -->
+                        <div class="stat-item"> <div class="stat-number">15+</div> <div class="stat-label">Years Experience</div> </div>
+                        <div class="stat-item"> <div class="stat-number">100%</div> <div class="stat-label">On-Time Record*</div> </div> <!-- Added On-Time Record -->
+                        <div class="stat-item"> <div class="stat-number">500+</div> <div class="stat-label">Satisfied Clients</div> </div> <!-- Changed from Profiles/Mission Success -->
                     </div>
+                     <p style="font-size: 0.8rem; margin-top: 15px; color: var(--light-section-secondary-text);">*Based on standard operating conditions.</p> <!-- Added footnote for On-Time -->
                 </div>
                 <div class="about-img">
-                     <img src="https://placehold.co/600x450/ffffff/eeeeee?text=Statesman+Ops" alt="Security team collaborating with technology" onerror="this.onerror=null; this.src='https://placehold.co/600x450/ffffff/eeeeee?text=Statesman+Ops';">
+                     <img src="https://placehold.co/600x450/ffffff/eeeeee?text=Professional+Service" alt="Professional chauffeur team and luxury vehicle" onerror="this.onerror=null; this.src='https://placehold.co/600x450/ffffff/eeeeee?text=Professional+Service';"> <!-- Updated placeholder text -->
                 </div>
             </div>
         </div>
@@ -963,12 +963,14 @@
     <section id="testimonials" class="section testimonials"> <!-- Background color applied via CSS -->
         <div class="container">
             <div class="section-header">
-                <h2>Client Intelligence</h2> <!-- Text color adjusted via CSS -->
+                 <!-- UPDATED TESTIMONIALS HEADER -->
+                <h2>Trusted by the Discerning</h2> <!-- Text color adjusted via CSS -->
                 <div class="section-divider"></div> <!-- Color adjusted via CSS -->
-                <p>Validated trust from leaders across global industries who require the highest standard of security and service.</p> <!-- Text color adjusted via CSS -->
+                <p>Hear from leaders who demand the absolute best in luxury transportation, reliability, and peace of mind.</p> <!-- Text color adjusted via CSS -->
             </div>
             <div class="testimonial-card"> <!-- Card style adjusted via CSS -->
-                <p class="testimonial-text">"In environments where failure is not an option, Statesman Coaches provides the strategic foresight and flawless execution necessary. Their integration of technology and human expertise is unmatched. They are an essential partner."</p> <!-- Text color adjusted via CSS -->
+                 <!-- Testimonial text remains, but framed by the luxury context -->
+                <p class="testimonial-text">"In environments where failure is not an option, Statesman Coaches provides the strategic foresight and flawless execution necessary. Their integration of technology and human expertise is unmatched. They are an essential partner for reliable, high-standard travel."</p> <!-- Text color adjusted via CSS, slightly tweaked end -->
                 <div class="testimonial-author">
                      <div class="author-img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/100x100/cccccc/aaaaaa?text=Client\')'"></div> <!-- Border color adjusted via CSS -->
                     <div class="author-info">
@@ -983,11 +985,13 @@
     <section id="contact" class="section cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Initiate Secure Consultation</h2>
+                <!-- UPDATED CTA SECTION -->
+                <h2>Arrange Your Premier Transportation</h2>
                 <div class="section-divider"></div>
-                <p>Engage with our specialists for a confidential assessment of your security and transportation requirements. Secure communication channels available.</p>
+                <p>Contact our dedicated concierge team to discuss your specific travel requirements and receive a personalized quote. Experience the Statesman difference – punctual, professional, perfect.</p>
                  <!-- *** EMAIL UPDATED HERE *** -->
-                <a href="mailto:info@statesmancoacheseps.com?subject=Secure Consultation Request" class="btn">Request Consultation</a>
+                 <!-- UPDATED BUTTON TEXT -->
+                <a href="mailto:info@statesmancoacheseps.com?subject=Premier Transportation Quote Request" class="btn">Request a Quote</a>
             </div>
         </div>
     </section>
@@ -998,37 +1002,41 @@
                 <div class="footer-col">
                      <!-- Footer Logo/Text - Keeping text for simplicity, but could be image too -->
                      <h3 style="font-family: var(--font-primary); letter-spacing: 2px; color: var(--white-color);">STATESMAN</h3>
-                    <p>Intelligence-driven security and premium mobility solutions for a complex world.</p>
+                     <!-- UPDATED FOOTER DESCRIPTION -->
+                    <p>Delivering exceptional luxury transportation and integrated security solutions with unparalleled professionalism and discretion.</p>
                     <ul class="social-icons">
                          <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                         <li><a href="#" aria-label="Secure Comms"><i class="fas fa-lock"></i></a></li>
+                         <li><a href="#" aria-label="Secure Comms"><i class="fas fa-lock"></i></a></li> <!-- Keep for security aspect -->
                          <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
                      </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Capabilities</h3>
+                     <!-- UPDATED FOOTER LINKS TITLE -->
+                    <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#services">Executive Protection</a></li>
-                        <li><a href="#fleet">Secure Transportation</a></li>
-                        <li><a href="#services">Event Security Ops</a></li>
-                        <li><a href="#services">Corporate Mobility</a></li>
-                        <li><a href="#contact">Risk Advisory</a></li>
-                        <li><a href="#contact">Secure Logistics</a></li>
+                        <!-- UPDATED LINKS TO MATCH SERVICES -->
+                        <li><a href="#fleet">Luxury Transportation</a></li>
+                        <li><a href="#services">Executive & Corporate</a></li>
+                        <li><a href="#services">Special Event Transport</a></li>
+                        <li><a href="#services">Integrated Security</a></li>
+                        <li><a href="#contact">Airport Transfers</a></li>
+                        <li><a href="#contact">Bespoke Itineraries</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Navigate</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Protocol</a></li>
-                        <li><a href="#services">Capabilities</a></li>
+                        <li><a href="#about">About Us</a></li> <!-- Changed from Protocol -->
+                        <li><a href="#services">Services</a></li> <!-- Changed from Capabilities -->
                         <li><a href="#fleet">Fleet</a></li>
-                        <li><a href="#testimonials">Client Intel</a></li>
+                        <li><a href="#testimonials">Client Testimonials</a></li> <!-- Changed from Client Intel -->
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Intel</h3>
+                     <!-- UPDATED FOOTER CONTACT TITLE -->
+                    <h3>Contact Information</h3>
                     <ul class="contact-info">
                         <!-- *** ADDRESS UPDATED HERE *** -->
                         <li><i class="fas fa-map-marker-alt"></i> <span>7061 Ring Neck Drive<br>Madisonville, LA 70447</span></li>
@@ -1036,18 +1044,21 @@
                         <li><i class="fas fa-phone-alt"></i> <span><a href="tel:+15044507420">(504) 450-7420</a></span></li>
                         <!-- *** EMAIL UPDATED HERE *** -->
                         <li><i class="fas fa-envelope"></i> <span><a href="mailto:info@statesmancoacheseps.com">info@statesmancoacheseps.com</a></span></li>
-                        <li><i class="fas fa-shield-alt"></i> <span>24/7 Global Security Desk</span></li>
+                        <li><i class="fas fa-clock"></i> <span>24/7 Availability for Bookings</span></li> <!-- Changed from Security Desk -->
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                  <!-- *** BUSINESS NAME UPDATED HERE *** -->
-                <p>© <span id="current-year">2025</span> Statesman Coaches and Executive Protection Services LLC. All Rights Reserved. Operative Discretion Assured.</p>
+                 <!-- UPDATED FOOTER TAGLINE -->
+                <p>© <span id="current-year">2025</span> Statesman Coaches and Executive Protection Services LLC. All Rights Reserved. Defining Premier Transportation.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // JAVASCRIPT REMAINS THE SAME - Controls functionality like menu toggle, scroll effects, etc.
+        // No changes needed here for the content re-focus.
         document.addEventListener('DOMContentLoaded', function() {
             const navToggle = document.getElementById('nav-toggle');
             const navMenu = document.getElementById('nav-menu');
@@ -1056,25 +1067,20 @@
             const headerContainer = header.querySelector('.header-container');
             const heroContainer = document.getElementById('hero-container');
             const navToggleIcon = navToggle ? navToggle.querySelector('i') : null;
-            // ===== JAVASCRIPT HEADER HEIGHT LOGIC UPDATE =====
-            // Use a function to get the current header height based on CSS/window size
+
             function getCurrentHeaderHeight() {
                 if (!headerContainer) return 95; // Default desktop height
-                // Check window width against breakpoints and return corresponding height from CSS
                 if (window.innerWidth < 993) {
                     return 90; // New mobile height
                 } else {
                     return 95; // Desktop height
                 }
-                // More robust alternative (if needed): return headerContainer.offsetHeight;
             }
-            // =================================================
 
             const mobileBreakpoint = 992;
 
             function updateHeroPadding() {
                 const currentHeaderHeight = getCurrentHeaderHeight();
-                // Adjust hero padding top dynamically
                 if (heroContainer) {
                      heroContainer.style.paddingTop = `${currentHeaderHeight}px`;
                  }
@@ -1113,9 +1119,8 @@
 
             // Close menu when a link is clicked
             navLinks.forEach(link => {
-                link.addEventListener('click', function(event) { // Added event parameter
+                link.addEventListener('click', function(event) {
                     if (window.innerWidth <= mobileBreakpoint && navMenu && navMenu.classList.contains('active')) {
-                        // No timeout needed, CSS handles the animation out
                         closeMobileMenu();
                     }
                     // Smooth scroll logic
@@ -1123,9 +1128,8 @@
                     if (targetId && targetId.length > 1 && targetId.startsWith('#')) {
                         const targetElement = document.getElementById(targetId.substring(1));
                         if (targetElement) {
-                            event.preventDefault(); // Prevent default only if it's a valid internal link
-                            // Use the dynamically calculated header height for offset
-                            let currentHeaderHeight = getCurrentHeaderHeight(); // Use updated function
+                            event.preventDefault();
+                            let currentHeaderHeight = getCurrentHeaderHeight();
                             const elementPosition = targetElement.getBoundingClientRect().top;
                             const offsetPosition = elementPosition + window.pageYOffset - currentHeaderHeight;
 
@@ -1145,7 +1149,7 @@
             document.addEventListener('click', function(event) {
                 if (window.innerWidth <= mobileBreakpoint && navMenu && navMenu.classList.contains('active')) {
                     const isClickInsideMenu = navMenu.contains(event.target);
-                    const isClickOnToggle = navToggle ? navToggle.contains(event.target) : false; // Check if navToggle exists
+                    const isClickOnToggle = navToggle ? navToggle.contains(event.target) : false;
                     if (!isClickInsideMenu && !isClickOnToggle) {
                         closeMobileMenu();
                     }
@@ -1180,22 +1184,11 @@
             if (heroVideo) {
                 heroVideo.addEventListener('error', (e) => {
                     console.error('Hero video error:', e);
-                    // The poster should already be showing, but you could
-                    // add specific classes or logic here if needed.
-                    // For example, maybe hide the broken video element explicitly
-                    // heroVideo.style.display = 'none';
                 });
-
-                // You might also listen for 'stalled' if you want to handle
-                // network interruptions after loading has started.
                 heroVideo.addEventListener('stalled', () => {
                     console.warn('Hero video stalled (network issue?)');
-                    // Decide if you want to do anything specific here.
                 });
             }
-
-
-
         });
     </script>
 
