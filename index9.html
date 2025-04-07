@@ -38,7 +38,6 @@
         #hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:-100;object-fit:cover;opacity:1;background-color:#0a0b1a}
         .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(10,11,26,.7),rgba(10,11,26,.95));z-index:-50;opacity:.8}
         .hero .container{position:relative;z-index:1;padding-top:95px;padding-bottom:40px;width:100%}
-        /* Removed opacity: 0; from the rule below */
         .hero-content{max-width:950px;margin:0 auto;position:relative;z-index:2;}
         .hero h1{font-size:4.5rem;margin-bottom:25px;line-height:1.15;font-weight:700;color:var(--white-color);text-shadow:0 2px 15px var(--shadow-color-dark-bg);letter-spacing:1px}
         .hero p{font-size:1.2rem;margin-bottom:45px;color:var(--primary-text-dark-bg);max-width:750px;margin-left:auto;margin-right:auto;font-weight:300;letter-spacing:.5px}
@@ -81,7 +80,23 @@
         .service-alternating-layout{display:flex;flex-direction:column;gap:80px}
         .service-row{display:flex;align-items:center;gap:50px}
         .service-image-col,.service-text-col{flex:1;min-width:0}
-        .service-image-col img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 10px 30px var(--light-shadow-color);object-fit:cover;aspect-ratio:4 / 3}
+        /* Updated rule for service images */
+        .service-image-col img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px; /* Kept radius as not explicitly asked to remove */
+            /* box-shadow removed */
+            object-fit: contain; /* Changed from cover */
+            /* aspect-ratio removed */
+            max-height: 400px; /* Added */
+            border: none; /* Explicitly ensure no border */
+        }
+        /* Ensure the specific luxury.png container has no border/shadow */
+        .service-row:first-child .service-image-col {
+            border: none;
+            box-shadow: none;
+        }
         .service-text-col h3{font-size:2rem;margin-bottom:20px;color:var(--light-section-heading);font-family:var(--font-primary);font-weight:600}
         .service-text-col p{color:var(--light-section-secondary-text);font-size:1rem;line-height:1.8}
         .fleet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:50px}
@@ -126,7 +141,6 @@
         .social-icons a:hover{background-color:var(--button-bg-color);border-color:var(--button-bg-color);color:var(--white-color);transform:translateY(-3px)}
         .footer-bottom{border-top:1px solid var(--border-color-dark-bg);padding-top:30px;text-align:center;color:var(--secondary-text-dark-bg);font-size:.9rem;font-weight:300}
 
-        /* ScrollReveal elements start hidden */
         [data-sr-id] { visibility: hidden; }
 
         @media (max-width:992px){
@@ -298,9 +312,7 @@
             <div class="service-alternating-layout">
                 <div class="service-row">
                     <div class="service-image-col">
-                        <img src="luxury.png" alt="Statesman" onerror="this.onerror=null; this.src='https://placehold.co/600x450/eeeeee/cccccc?text=Luxury+Transport';" box-shadow: none;
-    aspect-ratio: 1;
-    object-fit: contain;>
+                        <img src="luxury.png" alt="Statesman" onerror="this.onerror=null; this.src='https://placehold.co/600x400/eeeeee/cccccc?text=Luxury+Transport';">
                     </div>
                     <div class="service-text-col">
                         <h3>Premier Luxury Transportation</h3>
@@ -594,15 +606,12 @@
             if (heroVideo) {
                 heroVideo.addEventListener('error', (e) => {
                     console.warn("Hero video failed to load:", e);
-                    // Optionally display a fallback image or message here if the video fails
                 });
                  heroVideo.addEventListener('stalled', () => {
                     console.warn("Hero video stalled.");
-                    // Optionally display a fallback image or message here if the video stalls
                 });
             }
 
-            // --- ScrollReveal Animations ---
             if (typeof ScrollReveal !== 'undefined') {
                 const sr = ScrollReveal({
                     origin: 'bottom',
@@ -613,55 +622,43 @@
                     scale: 0.95,
                     easing: 'cubic-bezier(0.5, 0, 0, 1)',
                     mobile: true,
-                    reset: false, // Animations only happen once
-                    viewFactor: 0.2 // Element revealed when 20% visible
+                    reset: false,
+                    viewFactor: 0.2
                 });
 
-                // Hero Content (slight delay after page load)
-                // Ensure elements start invisible if JS is enabled, handled by [data-sr-id] { visibility: hidden; } CSS
                 sr.reveal('.hero-content h1', { delay: 500, distance: '60px', origin: 'top', scale: 1 });
                 sr.reveal('.hero-content p', { delay: 700, distance: '40px', scale: 1 });
                 sr.reveal('.hero-buttons .btn', { delay: 900, interval: 150, scale: 1 });
 
-                // Section Headers
                 sr.reveal('.section-header h2', { duration: 900 });
                 sr.reveal('.section-divider', { delay: 150, scale: 0.8 });
                 sr.reveal('.section-header p', { delay: 250 });
 
-                // Services Section
                 sr.reveal('.service-row', { interval: 200, distance: '60px', viewFactor: 0.3 });
-                // Specific origins for alternating layout
                 sr.reveal('.service-row:nth-child(odd) .service-image-col', { origin: 'left', delay: 200 });
                 sr.reveal('.service-row:nth-child(odd) .service-text-col', { origin: 'right', delay: 300 });
                 sr.reveal('.service-row:nth-child(even) .service-image-col', { origin: 'right', delay: 200 });
                 sr.reveal('.service-row:nth-child(even) .service-text-col', { origin: 'left', delay: 300 });
 
-
-                // Fleet Section
                 sr.reveal('.fleet-grid .vehicle-card', { interval: 150, viewFactor: 0.2, scale: 0.9 });
 
-                // About Section
                 sr.reveal('.about-content h2', {});
                 sr.reveal('.about-divider', { delay: 150 });
                 sr.reveal('.about-content p', { delay: 250, interval: 100 });
                 sr.reveal('.stat-item', { interval: 150, delay: 350, distance: '30px' });
                 sr.reveal('.about-img', { origin: 'right', distance: '60px', delay: 200 });
 
-                // Testimonials Section
                 sr.reveal('.testimonial-card', { scale: 0.95, duration: 1000 });
 
-                // CTA Section
                 sr.reveal('.cta-content h2', {});
                 sr.reveal('.cta .section-divider', { delay: 150 });
                 sr.reveal('.cta-content p', { delay: 250 });
                 sr.reveal('.cta .btn', { delay: 400, scale: 1 });
 
-                // Footer
                 sr.reveal('.footer-col', { interval: 100, distance: '40px', viewFactor: 0.1 });
 
             } else {
                  console.warn('ScrollReveal library not loaded.');
-                 // Fallback: Remove the initial hidden state if ScrollReveal fails
                  const srElements = document.querySelectorAll('[data-sr-id]');
                  srElements.forEach(el => el.style.visibility = 'visible');
             }
