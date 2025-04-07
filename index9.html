@@ -38,7 +38,8 @@
         #hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:-100;object-fit:cover;opacity:1;background-color:#0a0b1a}
         .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(10,11,26,.7),rgba(10,11,26,.95));z-index:-50;opacity:.8}
         .hero .container{position:relative;z-index:1;padding-top:95px;padding-bottom:40px;width:100%}
-        .hero-content{max-width:950px;margin:0 auto;position:relative;z-index:2;opacity:0}
+        /* Removed opacity: 0; from the rule below */
+        .hero-content{max-width:950px;margin:0 auto;position:relative;z-index:2;}
         .hero h1{font-size:4.5rem;margin-bottom:25px;line-height:1.15;font-weight:700;color:var(--white-color);text-shadow:0 2px 15px var(--shadow-color-dark-bg);letter-spacing:1px}
         .hero p{font-size:1.2rem;margin-bottom:45px;color:var(--primary-text-dark-bg);max-width:750px;margin-left:auto;margin-right:auto;font-weight:300;letter-spacing:.5px}
         .hero-divider{height:30px}
@@ -125,6 +126,7 @@
         .social-icons a:hover{background-color:var(--button-bg-color);border-color:var(--button-bg-color);color:var(--white-color);transform:translateY(-3px)}
         .footer-bottom{border-top:1px solid var(--border-color-dark-bg);padding-top:30px;text-align:center;color:var(--secondary-text-dark-bg);font-size:.9rem;font-weight:300}
 
+        /* ScrollReveal elements start hidden */
         [data-sr-id] { visibility: hidden; }
 
         @media (max-width:992px){
@@ -269,7 +271,7 @@
     </header>
 
     <section id="home" class="hero">
-        <video autoplay loop muted playsinline id="hero-video" poster="videoplaceholder.jpg" onerror="this.style.display='none'; document.getElementById('home').style.backgroundImage='url(videoplaceholder.jpg)'; document.getElementById('home').style.backgroundSize='cover'; document.getElementById('home').style.backgroundPosition='center';">
+        <video autoplay loop muted playsinline id="hero-video" poster="videoplaceholder.jpg">
             <source src="hero.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -604,9 +606,11 @@
             if (heroVideo) {
                 heroVideo.addEventListener('error', (e) => {
                     console.warn("Hero video failed to load:", e);
+                    // Optionally display a fallback image or message here if the video fails
                 });
                  heroVideo.addEventListener('stalled', () => {
                     console.warn("Hero video stalled.");
+                    // Optionally display a fallback image or message here if the video stalls
                 });
             }
 
@@ -626,6 +630,7 @@
                 });
 
                 // Hero Content (slight delay after page load)
+                // Ensure elements start invisible if JS is enabled, handled by [data-sr-id] { visibility: hidden; } CSS
                 sr.reveal('.hero-content h1', { delay: 500, distance: '60px', origin: 'top', scale: 1 });
                 sr.reveal('.hero-content p', { delay: 700, distance: '40px', scale: 1 });
                 sr.reveal('.hero-buttons .btn', { delay: 900, interval: 150, scale: 1 });
@@ -637,10 +642,11 @@
 
                 // Services Section
                 sr.reveal('.service-row', { interval: 200, distance: '60px', viewFactor: 0.3 });
-                sr.reveal('.service-row:nth-child(odd) .service-image-col', { origin: 'left' });
-                sr.reveal('.service-row:nth-child(odd) .service-text-col', { origin: 'right' });
-                sr.reveal('.service-row:nth-child(even) .service-image-col', { origin: 'right' });
-                sr.reveal('.service-row:nth-child(even) .service-text-col', { origin: 'left' });
+                // Specific origins for alternating layout
+                sr.reveal('.service-row:nth-child(odd) .service-image-col', { origin: 'left', delay: 200 });
+                sr.reveal('.service-row:nth-child(odd) .service-text-col', { origin: 'right', delay: 300 });
+                sr.reveal('.service-row:nth-child(even) .service-image-col', { origin: 'right', delay: 200 });
+                sr.reveal('.service-row:nth-child(even) .service-text-col', { origin: 'left', delay: 300 });
 
 
                 // Fleet Section
@@ -667,9 +673,9 @@
 
             } else {
                  console.warn('ScrollReveal library not loaded.');
-                 // Fallback: Make hero content visible immediately if ScrollReveal fails
-                 const heroContent = document.querySelector('.hero-content');
-                 if(heroContent) heroContent.style.opacity = '1';
+                 // Fallback: Remove the initial hidden state if ScrollReveal fails
+                 const srElements = document.querySelectorAll('[data-sr-id]');
+                 srElements.forEach(el => el.style.visibility = 'visible');
             }
 
         });
