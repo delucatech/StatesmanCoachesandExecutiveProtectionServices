@@ -1,914 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-<meta name="theme-color" content="#0a0b1a">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- UPDATED TITLE -->
+    <meta charset=UTF-8>
+    <meta name=theme-color content=#0a0b1a>
+    <meta name=viewport content="width=device-width,initial-scale=1">
     <title>Statesman Coaches | Premier Luxury Transportation & Executive Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel=stylesheet>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css integrity=sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA== crossorigin=anonymous referrerpolicy=no-referrer>
     <style>
-        :root {
-            --primary-bg: #0a0b1a;
-            --secondary-bg: #1a1c3a;
-            --primary-text-dark-bg: #e8e8ff;
-            --secondary-text-dark-bg: #b0b8d7;
-            --accent-color: #00263e; /* Original dark blue for non-button elements */
-            /* ===== COLOR UPDATE ===== */
-            --button-bg-color: #015aa2; /* New primary blue */
-            --button-hover-bg-color: #014a85; /* Darker hover for new blue */
-            /* ===== END COLOR UPDATE ===== */
-            --white-color: #ffffff;
-            --black-color: #000000;
-            --light-section-bg: var(--white-color);
-            --light-section-text: #333333;
-            --light-section-secondary-text: #666666;
-            --light-section-heading: #111111;
-            --light-border-color: #dee2e6;
-            --light-shadow-color: rgba(0, 0, 0, 0.1);
-            --logo-color: var(--white-color);
-            --border-color-dark-bg: rgba(255, 255, 255, 0.1);
-            --shadow-color-dark-bg: rgba(0, 0, 0, 0.4);
-            --header-scrolled-bg: rgba(10, 11, 26, 0.9);
-            --transition: all 0.3s ease-in-out;
-            --font-primary: 'Poppins', sans-serif;
-            --font-secondary: 'Playfair Display', serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            background-color: var(--light-section-bg);
-            color: var(--light-section-text);
-            line-height: 1.7;
-            font-family: var(--font-primary);
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 25px;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-secondary);
-            font-weight: 700;
-            color: var(--light-section-heading);
-            line-height: 1.3;
-            letter-spacing: 0.5px;
-        }
-
-        header {
-            background-color: transparent;
-            color: var(--white-color);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid transparent;
-            transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        header.header-scrolled {
-            background-color: var(--header-scrolled-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color-dark-bg);
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 25px; /* Adjusted padding for taller header */
-            max-width: 1280px;
-            margin: 0 auto;
-            /* ===== HEADER HEIGHT UPDATE (Desktop Base) ===== */
-            height: 95px;
-            transition: height 0.3s ease, padding 0.3s ease;
-        }
-
-        /* --- Logo Styling --- */
-        .logo {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            flex-shrink: 0;
-            transition: var(--transition);
-            margin-right: auto;
-            padding: 5px 0;
-        }
-        .logo:hover {
-             opacity: 0.9;
-        }
-        .logo img.logo-img {
-            /* ===== LOGO HEIGHT UPDATE (Desktop Base) ===== */
-            height: 75px; /* Base height for desktop */
-            width: auto;
-            display: block;
-            border: none;
-            transition: height 0.3s ease; /* Add transition for resizing */
-        }
-        /* --- End Logo Styling --- */
-
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-menu li {
-            margin-left: 45px; /* Slightly increased spacing */
-        }
-
-        .nav-menu a {
-            color: var(--primary-text-dark-bg);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-            padding-bottom: 5px;
-            display: inline-block;
-            /* ===== NAV LINK FONT SIZE UPDATE (Desktop) ===== */
-            font-size: 1.05rem; /* Increased font size */
-            letter-spacing: 0.8px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-        }
-         header.header-scrolled .nav-menu a {
-             text-shadow: none;
-         }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--button-bg-color); /* Updated color */
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-             color: var(--white-color);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        /* ===== "Call Us" Button Always Visible START ===== */
-        .header-call-btn {
-            display: inline-block;
-            padding: 8px 22px; /* Slightly adjusted padding */
-            background-color: var(--button-bg-color); /* Updated color */
-            color: var(--white-color);
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem; /* Slightly increased size */
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Keep transitions for hover */
-            border: none;
-            cursor: pointer;
-            white-space: nowrap;
-            margin-left: 40px; /* Adjusted margin */
-            line-height: normal;
-            /* Removed opacity, visibility, transform - button is now always visible */
-        }
-        /* ===== "Call Us" Button Always Visible END ===== */
-
-        /* Removed header.header-scrolled .header-call-btn rule as it's no longer needed to show the button */
-
-        .header-call-btn:hover {
-             background-color: var(--button-hover-bg-color); /* Updated color */
-             /* ===== SHADOW COLOR UPDATE ===== */
-             box-shadow: 0 4px 15px rgba(1, 90, 162, 0.3); /* Updated shadow color */
-             transform: translateY(-2px); /* Keep hover transform */
-             color: var(--white-color);
-        }
-
-        .nav-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 28px; /* Slightly larger */
-            color: var(--primary-text-dark-bg);
-            background: none;
-            border: none;
-            padding: 5px;
-            line-height: 1;
-            z-index: 1150;
-            position: relative;
-            transition: var(--transition);
-            margin-left: 15px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-        }
-        header.header-scrolled .nav-toggle {
-            text-shadow: none;
-        }
-         .nav-toggle:hover {
-             color: var(--white-color);
-         }
-
-        .hero {
-            min-height: 100vh;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white-color);
-            text-align: center;
-        }
-
-        #hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translateX(-50%) translateY(-50%);
-            z-index: -100;
-            object-fit: cover; /* This style applies to the video AND the poster */
-            opacity: 1;
-            /* Optional: Add a background color to the video element itself
-               that matches the placeholder or overlay if there's a brief moment
-               before the poster loads */
-            background-color: #0a0b1a;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(10, 11, 26, 0.7), rgba(10, 11, 26, 0.95));
-            z-index: -50;
-			opacity: .8;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-            /* ===== HERO PADDING UPDATE (Desktop Base) ===== */
-            padding-top: 95px; /* Match new desktop header height */
-            padding-bottom: 40px;
-            width: 100%;
-        }
-
-        .hero-content {
-            max-width: 950px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-            animation: fadeInHeroContent 1s ease-out 0.5s forwards;
-            opacity: 0;
-        }
-
-        @keyframes fadeInHeroContent {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 25px;
-            line-height: 1.15;
-            font-weight: 700;
-            color: var(--white-color);
-            text-shadow: 0 2px 15px var(--shadow-color-dark-bg);
-            letter-spacing: 1px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 45px;
-            color: var(--primary-text-dark-bg);
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-divider {
-             height: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: var(--button-bg-color); /* Updated color */
-            color: var(--white-color);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-            /* ===== SHADOW COLOR UPDATE ===== */
-            box-shadow: 0 8px 25px rgba(1, 90, 162, 0.3); /* Updated shadow color */
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-         .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-            z-index: -1;
-         }
-
-        .btn:hover {
-            transform: translateY(-4px) scale(1.02);
-            /* ===== SHADOW COLOR UPDATE ===== */
-            box-shadow: 0 12px 30px rgba(1, 90, 162, 0.45); /* Updated hover shadow color */
-            background-color: var(--button-hover-bg-color); /* Updated color */
-            color: var(--white-color);
-        }
-         .btn:hover::before {
-             left: 100%;
-         }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--button-bg-color); /* Updated color */
-            border: 2px solid var(--button-bg-color); /* Updated color */
-            margin-left: 25px;
-            box-shadow: none;
-        }
-         .btn-outline::before { display: none; }
-
-        .btn-outline:hover {
-            background-color: var(--button-bg-color); /* Updated color */
-            color: var(--white-color);
-            border-color: var(--button-bg-color); /* Updated color */
-            transform: translateY(-4px);
-            /* ===== SHADOW COLOR UPDATE ===== */
-            box-shadow: 0 8px 20px rgba(1, 90, 162, 0.2); /* Updated shadow */
-        }
-
-        .section {
-            padding: 120px 0;
-            position: relative;
-            z-index: 5;
-            overflow: hidden;
-            background-color: var(--light-section-bg);
-            color: var(--light-section-text);
-        }
-        .section h2, .section h3, .section h4 { color: var(--light-section-heading); }
-        .section p { color: var(--light-section-secondary-text); }
-
-        #services, #about, #contact { /* Keep these light */
-             background-color: var(--light-section-bg);
-        }
-
-        /* === Fleet & Testimonials Background/Text Color === */
-        #fleet, #testimonials {
-            background-color: var(--accent-color); /* #00263e */
-            color: var(--primary-text-dark-bg);
-        }
-        #fleet .section-header h2, #testimonials .section-header h2,
-        #fleet h3, #fleet h4,
-        #testimonials h3, #testimonials h4 {
-            color: var(--white-color);
-        }
-        #fleet .section-header p, #testimonials .section-header p,
-        #fleet p, #testimonials p {
-            color: var(--secondary-text-dark-bg);
-        }
-        #fleet .section-divider, #testimonials .section-divider {
-            background-color: var(--button-bg-color); /* Updated color */
-        }
-
-        /* Fleet specific adjustments */
-        #fleet .vehicle-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color-dark-bg);
-            box-shadow: 0 3px 10px var(--shadow-color-dark-bg);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        #fleet .vehicle-card:hover {
-            box-shadow: 0 15px 40px var(--shadow-color-dark-bg);
-            transform: translateY(-10px);
-        }
-        #fleet .vehicle-content h3 { color: var(--white-color); }
-        #fleet .vehicle-content p { color: var(--secondary-text-dark-bg); }
-        #fleet .vehicle-features {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 20px;
-        }
-        #fleet .vehicle-features li {
-            color: var(--secondary-text-dark-bg);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 10px;
-        }
-        #fleet .vehicle-features li i {
-            color: var(--button-bg-color); /* Updated color */
-            margin-right: 12px;
-            width: 20px;
-            text-align: center;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-
-        /* Testimonials specific adjustments */
-        #testimonials .testimonial-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color-dark-bg);
-            box-shadow: 0 5px 20px var(--shadow-color-dark-bg);
-        }
-        #testimonials .testimonial-card::before {
-            color: var(--button-bg-color); /* Updated color */
-            opacity: 0.5;
-        }
-        #testimonials .testimonial-text { color: var(--primary-text-dark-bg); }
-        #testimonials .author-info h4 { color: var(--white-color); }
-        #testimonials .author-info p { color: var(--button-bg-color); } /* Updated color */
-        #testimonials .author-img { border-color: var(--button-bg-color); } /* Updated color */
-        /* === End Fleet/Testimonials Styling === */
-
-
-        .section-header { text-align: center; margin-bottom: 80px; }
-        .section-header h2 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; letter-spacing: 1px; }
-        .section-header p { max-width: 750px; margin: 0 auto; font-size: 1.1rem; }
-        .section-divider { width: 70px; height: 3px; background-color: var(--accent-color); margin: 30px auto; border-radius: 2px; } /* Default divider color */
-
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .service-card { background-color: var(--white-color); border-radius: 12px; overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; border: 1px solid var(--light-border-color); box-shadow: 0 3px 10px var(--light-shadow-color); }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px var(--light-shadow-color);  }
-        .service-img { height: 220px; background-size: cover; background-position: center; filter: grayscale(50%) contrast(110%); transition: var(--transition); }
-        .service-card:hover .service-img { filter: grayscale(0%) contrast(100%); }
-        .service-content { padding: 35px; flex-grow: 1; display: flex; flex-direction: column; }
-        .service-content h3 { font-size: 1.6rem; margin-bottom: 15px; color: var(--light-section-heading); font-family: var(--font-primary); font-weight: 600; }
-        .service-content p { color: var(--light-section-secondary-text); margin-bottom: 25px; flex-grow: 1; font-size: 0.95rem; }
-        .learn-more { color: var(--button-bg-color); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; transition: var(--transition); margin-top: auto; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-        .learn-more:hover { color: var(--button-hover-bg-color); text-shadow: none; }
-        .learn-more span { margin-left: 8px; transition: var(--transition); display: inline-block; }
-        .learn-more:hover span { transform: translateX(5px); }
-
-        .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 40px; }
-        .vehicle-img { height: 280px; background-size: cover; background-position: center; filter: brightness(0.9) contrast(1.1); transition: var(--transition); }
-        .vehicle-card:hover .vehicle-img { filter: brightness(1) contrast(1); }
-        .vehicle-content { padding: 35px; flex-grow: 1; }
-        .vehicle-features {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 20px;
-        }
-
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .about-img { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px var(--light-shadow-color); position: relative; }
-        .about-img img { width: 100%; height: auto; display: block; filter: grayscale(20%); }
-        .about-content h2 { font-size: 3rem; margin-bottom: 20px; color: var(--light-section-heading); font-weight: 700; }
-        .about-divider { width: 80px; height: 3px; background-color: var(--accent-color); margin: 30px 0; border-radius: 2px; }
-        .about-content p { margin-bottom: 25px; color: var(--light-section-secondary-text); font-size: 1rem; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 3.5rem; font-weight: 700; color: var(--accent-color); margin-bottom: 5px; font-family: var(--font-primary); display: inline-block; }
-        .stat-label { font-size: 0.9rem; color: var(--light-section-secondary-text); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-
-        .testimonial-card {
-             border-radius: 12px; padding: 60px 70px; margin: 0 auto; max-width: 850px; position: relative;
-        }
-        .testimonial-card::before {
-             content: '\f10d'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 60px; position: absolute; top: 35px; left: 35px; line-height: 1;
-        }
-        .testimonial-text { font-size: 1.25rem; line-height: 1.8; margin-bottom: 40px; position: relative; z-index: 1; font-weight: 300; }
-        .testimonial-author { display: flex; align-items: center; justify-content: flex-start; padding-left: 0; }
-        .author-img { width: 65px; height: 65px; border-radius: 50%; background-color: #ccc; margin-right: 20px; background-size: cover; background-position: center; border: 3px solid; flex-shrink: 0; }
-        .author-info { text-align: left; }
-        .author-info h4 { font-size: 1.1rem; margin-bottom: 5px; font-weight: 600; font-family: var(--font-primary); }
-        .author-info p { font-size: 0.9rem; margin: 0; font-style: normal; }
-
-        .cta-content { max-width: 750px; margin: 0 auto; text-align: center; }
-        .cta h2 { font-size: 3rem; margin-bottom: 20px; color: var(--light-section-heading); font-weight: 700; }
-        .cta p { margin-bottom: 45px; color: var(--light-section-secondary-text); font-size: 1.1rem; }
-
-        footer {
-            background-color: var(--primary-bg);
-            color: var(--primary-text-dark-bg);
-            padding: 100px 0 30px;
-            position: relative;
-            z-index: 10;
-            border-top: 1px solid var(--border-color-dark-bg);
-        }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 50px; margin-bottom: 80px; }
-        .footer-col h3 { font-size: 1.4rem; margin-bottom: 30px; position: relative; padding-bottom: 15px; font-weight: 600; font-family: var(--font-primary); color: var(--white-color); letter-spacing: 1px; }
-        .footer-col h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background-color: var(--button-bg-color); border-radius: 1px; } /* Updated color */
-        .footer-col p { color: var(--secondary-text-dark-bg); margin-bottom: 20px; line-height: 1.8; font-size: 0.95rem; font-weight: 300; }
-        .footer-links, .contact-info { list-style: none; padding: 0; }
-        .footer-links li { margin-bottom: 15px; }
-        .footer-links a { color: var(--secondary-text-dark-bg); text-decoration: none; transition: var(--transition); font-size: 0.95rem; font-weight: 300; }
-        .footer-links a:hover { color: white; padding-left: 8px; }
-        .contact-info li { display: flex; margin-bottom: 18px; color: var(--secondary-text-dark-bg); align-items: flex-start; font-size: 0.95rem; font-weight: 300; }
-        .contact-info li i { margin-right: 15px; color: var(--button-bg-color); width: 20px; text-align: center; margin-top: 4px; font-size: 1rem; flex-shrink: 0; } /* Updated color */
-        .contact-info li span { flex-grow: 1; }
-        .contact-info li a { color: inherit; text-decoration: none; transition: var(--transition); }
-        .contact-info li a:hover { color: var(--button-bg-color); } /* Updated color */
-        .social-icons { display: flex; list-style: none; padding: 0; margin-top: 25px; }
-        .social-icons li { margin-right: 15px; }
-        .social-icons a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); color: var(--primary-text-dark-bg); text-decoration: none; transition: var(--transition); font-size: 1rem; border: 1px solid var(--border-color-dark-bg); }
-        .social-icons a:hover { background-color: var(--button-bg-color); border-color: var(--button-bg-color); color: var(--white-color); transform: translateY(-3px); } /* Updated color */
-        .footer-bottom { border-top: 1px solid var(--border-color-dark-bg); padding-top: 30px; text-align: center; color: var(--secondary-text-dark-bg); font-size: 0.9rem; font-weight: 300; }
-
-        /* ===== MEDIA QUERIES START ===== */
-
-        @media (max-width: 992px) {
-            html { font-size: 15px; }
-            /* ===== HEADER/LOGO HEIGHT UPDATE (Mobile - Larger) ===== */
-            .header-container { height: 90px; padding: 10px 20px; } /* Increased height */
-            .logo img.logo-img { height: 70px; } /* Increased height */
-
-            .nav-toggle { display: block; order: 3; }
-            .header-call-btn {
-                 order: 2;
-                 margin-left: auto;
-                 margin-right: 10px;
-                 padding: 6px 18px; /* Adjusted */
-                 font-size: 0.85rem; /* Adjusted */
-                 /* Button is always visible now, no need for opacity/visibility here */
-                 transform: translateY(0); /* Ensure it's positioned correctly */
-            }
-            .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%; /* Start off-screen */
-                width: 100%;
-                height: 100vh;
-                z-index: 1100;
-                background-color: rgba(10, 11, 26, 0.98);
-                backdrop-filter: blur(15px);
-                -webkit-backdrop-filter: blur(15px);
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                /* ===== MOBILE MENU PADDING UPDATE (Match new header height) ===== */
-                padding-top: 90px; /* Clear taller header */
-                transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Only transition the menu container slide */
-                overflow-y: auto;
-                display: flex;
-                border-left: 1px solid var(--border-color-dark-bg);
-                box-shadow: -5px 0 25px rgba(0,0,0,0.3);
-                margin-left: 0;
-                order: 1;
-            }
-
-            .nav-menu.active { right: 0; } /* Slide in */
-
-            /* ===== Mobile Nav Item Animation START ===== */
-            .nav-menu li {
-                margin: 0;
-                width: 100%;
-                text-align: center;
-                opacity: 0; /* Initially hidden */
-                transform: translateX(20px); /* Initially shifted right */
-                transition: opacity 0.4s ease, transform 0.4s ease; /* Animation for appearing/disappearing */
-            }
-
-            /* Apply staggered delay when menu is active */
-            .nav-menu.active li {
-                opacity: 1; /* Fade in */
-                transform: translateX(0); /* Slide in */
-            }
-
-            .nav-menu.active li:nth-child(1) { transition-delay: 0.1s; }
-            .nav-menu.active li:nth-child(2) { transition-delay: 0.15s; }
-            .nav-menu.active li:nth-child(3) { transition-delay: 0.2s; }
-            .nav-menu.active li:nth-child(4) { transition-delay: 0.25s; }
-            .nav-menu.active li:nth-child(5) { transition-delay: 0.3s; }
-            .nav-menu.active li:nth-child(6) { transition-delay: 0.35s; }
-            /* Add more if needed */
-            /* ===== Mobile Nav Item Animation END ===== */
-
-
-            .nav-menu a {
-                display: block;
-                padding: 22px 25px;
-                border-bottom: 1px solid var(--border-color-dark-bg);
-                width: 100%;
-                color: var(--primary-text-dark-bg);
-                font-size: 1.3rem; /* Keep mobile menu font size */
-                font-weight: 500;
-                transition: background-color 0.3s ease, color 0.3s ease; /* Keep hover transition */
-                text-shadow: none;
-            }
-            .nav-menu a::after { display: none; }
-            .nav-menu li:last-child a { border-bottom: none; }
-            .nav-menu a:hover {
-                /* ===== MOBILE MENU HOVER COLOR UPDATE ===== */
-                background-color: rgba(1, 90, 162, 0.1); /* Updated color */
-                color: var(--white-color);
-            }
-
-            /* ===== HERO PADDING UPDATE (Mobile - Match new header height) ===== */
-            .hero .container { padding-top: 90px; }
-
-            .section { padding: 100px 0; }
-            .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .about-img { order: -1; margin-bottom: 40px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
-            .fleet-grid { grid-template-columns: 1fr; }
-            .footer-grid { gap: 40px; }
-            .hero h1 { font-size: 3.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .section-header h2, .about-content h2, .cta h2 { font-size: 2.6rem; }
-            .testimonial-card { padding: 50px 40px; }
-            #fleet .vehicle-features { grid-template-columns: 1fr; } /* This might need adjustment based on content */
-        }
-
-        @media (max-width: 768px) {
-             html { font-size: 14px; }
-             .container { padding: 0 20px; }
-             /* ===== HEADER/LOGO HEIGHT UPDATE (Mobile - Larger) ===== */
-             .header-container { height: 90px; padding: 10px 15px; } /* Keep consistent larger height */
-             .logo img.logo-img { height: 70px; } /* Keep consistent larger height */
-
-             /* ===== MOBILE MENU PADDING UPDATE (Match new header height) ===== */
-             .nav-menu { padding-top: 90px; } /* Clear taller header */
-             .header-call-btn {
-                 padding: 5px 15px; /* Adjusted */
-                 font-size: 0.8rem; /* Adjusted */
-             }
-             .nav-menu a {
-                 font-size: 1.2rem; /* Keep mobile menu font size */
-                 padding: 20px 25px;
-             }
-
-             /* ===== HERO PADDING UPDATE (Mobile - Match new header height) ===== */
-             .hero .container { padding-top: 90px; } /* Match header */
-             .hero h1 { font-size: 2.8rem; }
-             .hero p { font-size: 1.05rem; }
-             .section { padding: 80px 0; }
-             .section-header { margin-bottom: 60px; }
-             .section-header h2, .about-content h2, .cta h2 { font-size: 2.2rem; }
-             .testimonial-card { padding: 40px 30px; }
-             .testimonial-card::before { font-size: 45px; top: 25px; left: 25px; }
-             .testimonial-author { flex-direction: column; text-align: center; }
-             .author-img { margin-right: 0; margin-bottom: 15px; width: 60px; height: 60px; }
-             .footer-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-             .btn { padding: 14px 35px; font-size: 0.85rem; letter-spacing: 1.2px; }
-        }
-
-        @media (max-width: 576px) {
-             /* ===== HEADER/LOGO HEIGHT UPDATE (Mobile - Larger) ===== */
-             .header-container { height: 90px; padding: 10px 15px; } /* Keep consistent larger height */
-             .logo img.logo-img { height: 70px; } /* Keep consistent larger height */
-
-             /* ===== MOBILE MENU PADDING UPDATE (Match new header height) ===== */
-             .nav-menu { padding-top: 90px; } /* Clear taller header */
-             .header-call-btn {
-                 padding: 5px 12px; /* Adjusted */
-                 font-size: 0.75rem; /* Adjusted */
-                 margin-right: 5px;
-             }
-             .nav-toggle { margin-left: 5px; }
-             .nav-menu a {
-                 font-size: 1.15rem; /* Keep mobile menu font size */
-                 padding: 18px 20px;
-             }
-
-             /* ===== HERO PADDING UPDATE (Mobile - Match new header height) ===== */
-             .hero .container { padding-top: 90px; } /* Match header */
-             .hero h1 { font-size: 2.2rem; }
-             .hero p { font-size: 1rem; }
-             .hero .btn { padding: 12px 30px; font-size: 0.8rem; }
-             .hero-buttons .btn { display: block; width: 90%; max-width: 300px; margin: 20px auto 0; }
-             .hero-buttons .btn-outline { margin-left: auto; margin-right: auto; }
-
-             .section { padding: 60px 0; }
-             .section-header { margin-bottom: 50px; }
-             .section-header h2, .about-content h2, .cta h2 { font-size: 2rem; }
-             .services-grid { grid-template-columns: 1fr; gap: 30px; }
-             .stats-grid { grid-template-columns: 1fr; gap: 35px; }
-             .stat-number { font-size: 3rem; }
-
-             footer { padding: 60px 0 20px; }
-             .footer-grid { grid-template-columns: 1fr; text-align: center; }
-             .footer-col h3::after { left: 50%; transform: translateX(-50%); }
-             .contact-info li { justify-content: center; text-align: left; }
-             .contact-info li i { margin-top: 2px; }
-             .social-icons { justify-content: center; }
-             .testimonial-card { padding: 35px 20px; }
-             .testimonial-text { font-size: 1.1rem; }
-        }
-
-        @media (min-width: 993px) {
-            .nav-toggle { display: none !important; }
-            /* ===== HEADER/LOGO HEIGHT RESET (Desktop) ===== */
-            .header-container { height: 95px; } /* Reset to desktop height */
-            .logo img.logo-img { height: 75px; } /* Reset to desktop height */
-
-            .header-call-btn {
-                 margin-left: 40px; /* Adjusted */
-                 margin-right: 0;
-                 order: 0;
-                 /* Button is always visible, ensure transform is reset if needed */
-                 transform: translateY(0);
-            }
-            .nav-menu {
-                position: static !important;
-                right: auto !important; top: auto !important;
-                width: auto !important; height: auto !important;
-                background-color: transparent !important;
-                backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
-                flex-direction: row !important;
-                padding-top: 0 !important; /* Reset padding */
-                overflow-y: visible !important; transition: none !important;
-                align-items: center !important; border-left: none !important;
-                box-shadow: none !important;
-                margin-left: 0 !important;
-                order: 0;
-                z-index: auto;
-            }
-            .nav-menu li {
-                 margin: 0 0 0 45px !important; /* Adjusted */
-                 width: auto !important; text-align: left !important;
-                 /* Reset mobile animation styles */
-                 opacity: 1 !important;
-                 transform: none !important;
-                 transition: none !important;
-            }
-            .nav-menu a {
-                display: inline-block !important;
-                padding: 0 0 5px 0 !important;
-                border-bottom: none !important; width: auto !important;
-                color: var(--primary-text-dark-bg) !important;
-                background-color: transparent !important;
-                /* ===== NAV LINK FONT SIZE RESET (Desktop) ===== */
-                font-size: 1.05rem !important; /* Increased font size */
-                font-weight: 500 !important;
-            }
-            .nav-menu a::after { display: block !important; }
-            .nav-menu.active { right: auto !important; } /* Reset just in case */
-
-            /* ===== HERO PADDING RESET (Desktop) ===== */
-            .hero .container { padding-top: 95px !important; } /* Ensure desktop padding is correct */
-
-            .hero-buttons .btn { display: inline-block !important; width: auto !important; max-width: none !important; margin: 0 !important; }
-             .hero-buttons .btn-outline { margin-left: 25px !important; }
-        }
-        /* ===== MEDIA QUERIES END ===== */
-
+        :root{--primary-bg:#0a0b1a;--secondary-bg:#1a1c3a;--primary-text-dark-bg:#e8e8ff;--secondary-text-dark-bg:#e8ebf5;--accent-color:#00263e;--button-bg-color:#015aa2;--button-hover-bg-color:#014a85;--white-color:#fff;--black-color:#000;--light-section-bg:var(--white-color);--light-section-text:#333;--light-section-secondary-text:#666;--light-section-heading:#111;--light-border-color:#dee2e6;--light-shadow-color:rgba(0,0,0,.1);--logo-color:var(--white-color);--border-color-dark-bg:rgba(255,255,255,.1);--shadow-color-dark-bg:rgba(0,0,0,.4);--header-scrolled-bg:rgba(10,11,26,.9);--transition:all .3s ease-in-out;--font-primary:'Poppins',sans-serif;--font-secondary:'Playfair Display',serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;font-size:16px}
+        body{background-color:var(--light-section-bg);color:var(--light-section-text);line-height:1.7;font-family:var(--font-primary);font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+        .container{width:100%;max-width:1280px;margin:0 auto;padding:0 25px}
+        h1,h2,h3,h4,h5,h6{font-family:var(--font-secondary);font-weight:700;color:var(--light-section-heading);line-height:1.3;letter-spacing:.5px}
+        header{background-color:transparent;color:var(--white-color);position:fixed;top:0;left:0;width:100%;z-index:1000;border-bottom:1px solid transparent;transition:background-color .4s ease,border-color .4s ease,box-shadow .4s ease}
+        header.header-scrolled{background-color:var(--header-scrolled-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color-dark-bg);box-shadow:0 3px 15px rgba(0,0,0,.15)}
+        .header-container{display:flex;justify-content:space-between;align-items:center;padding:10px 25px;max-width:1280px;margin:0 auto;height:95px;transition:height .3s ease,padding .3s ease}
+        .logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0;transition:var(--transition);margin-right:auto;padding:5px 0}
+        .logo:hover{opacity:.9}
+        .logo img.logo-img{height:75px;width:auto;display:block;border:none;transition:height .3s ease}
+        .nav-menu{display:flex;list-style:none;align-items:center}
+        .nav-menu li{margin-left:45px}
+        .nav-menu a{color:var(--primary-text-dark-bg);text-decoration:none;font-weight:500;transition:var(--transition);position:relative;padding-bottom:5px;display:inline-block;font-size:1.05rem;letter-spacing:.8px;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+        header.header-scrolled .nav-menu a{text-shadow:none}
+        .nav-menu a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background-color:var(--button-bg-color);transition:width .3s ease}
+        .nav-menu a:hover{color:var(--white-color)}
+        .nav-menu a:hover::after{width:100%}
+        .header-call-btn{display:inline-block;padding:8px 22px;background-color:var(--button-bg-color);color:var(--white-color);text-decoration:none;border-radius:6px;font-weight:600;font-size:.9rem;letter-spacing:1px;transition:background-color .3s ease,box-shadow .3s ease,transform .3s ease;border:none;cursor:pointer;white-space:nowrap;margin-left:40px;line-height:normal}
+        .header-call-btn:hover{background-color:var(--button-hover-bg-color);box-shadow:0 4px 15px rgba(1,90,162,.3);transform:translateY(-2px);color:var(--white-color)}
+        .nav-toggle{display:none;cursor:pointer;font-size:28px;color:var(--primary-text-dark-bg);background:0 0;border:none;padding:5px;line-height:1;z-index:1150;position:relative;transition:var(--transition);margin-left:15px;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+        header.header-scrolled .nav-toggle{text-shadow:none}
+        .nav-toggle:hover{color:var(--white-color)}
+        .hero{min-height:100vh;height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--white-color);text-align:center}
+        #hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:-100;object-fit:cover;opacity:1;background-color:#0a0b1a}
+        .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(10,11,26,.7),rgba(10,11,26,.95));z-index:-50;opacity:.8}
+        .hero .container{position:relative;z-index:1;padding-top:95px;padding-bottom:40px;width:100%}
+        .hero-content{max-width:950px;margin:0 auto;position:relative;z-index:2;animation:fadeInHeroContent 1s ease-out .5s forwards;opacity:0}
+        @keyframes fadeInHeroContent{0%{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .hero h1{font-size:4.5rem;margin-bottom:25px;line-height:1.15;font-weight:700;color:var(--white-color);text-shadow:0 2px 15px var(--shadow-color-dark-bg);letter-spacing:1px}
+        .hero p{font-size:1.2rem;margin-bottom:45px;color:var(--primary-text-dark-bg);max-width:750px;margin-left:auto;margin-right:auto;font-weight:300;letter-spacing:.5px}
+        .hero-divider{height:30px}
+        .btn{display:inline-block;padding:15px 40px;background-color:var(--button-bg-color);color:var(--white-color);text-decoration:none;border-radius:8px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;transition:var(--transition);border:none;cursor:pointer;font-size:.9rem;box-shadow:0 8px 25px rgba(1,90,162,.3);position:relative;overflow:hidden;z-index:1}
+        .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease;z-index:-1}
+        .btn:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 30px rgba(1,90,162,.45);background-color:var(--button-hover-bg-color);color:var(--white-color)}
+        .btn:hover::before{left:100%}
+        .btn-outline{background:transparent;color:var(--button-bg-color);border:2px solid var(--button-bg-color);margin-left:25px;box-shadow:none}
+        .btn-outline::before{display:none}
+        .btn-outline:hover{background-color:var(--button-bg-color);color:var(--white-color);border-color:var(--button-bg-color);transform:translateY(-4px);box-shadow:0 8px 20px rgba(1,90,162,.2)}
+        .section{padding:120px 0;position:relative;z-index:5;overflow:hidden;background-color:var(--light-section-bg);color:var(--light-section-text)}
+        .section h2,.section h3,.section h4{color:var(--light-section-heading)}
+        .section p{color:var(--light-section-secondary-text)}
+        #services,#about,#contact{background-color:var(--light-section-bg)}
+        #fleet,#testimonials{background-color:var(--accent-color);color:var(--primary-text-dark-bg)}
+        #fleet .section-header h2,#testimonials .section-header h2,#fleet h3,#fleet h4,#testimonials h3,#testimonials h4{color:var(--white-color)}
+        #fleet .section-header p,#testimonials .section-header p,#fleet p,#testimonials p{color:var(--secondary-text-dark-bg)}
+        #fleet .section-divider,#testimonials .section-divider{background-color:var(--button-bg-color)}
+        #fleet .vehicle-card{background-color:rgba(255,255,255,.05);border:1px solid var(--border-color-dark-bg);box-shadow:0 3px 10px var(--shadow-color-dark-bg);transition:var(--transition);display:flex;flex-direction:column;border-radius:12px;overflow:hidden}
+        #fleet .vehicle-card:hover{box-shadow:0 15px 40px var(--shadow-color-dark-bg);transform:translateY(-10px)}
+        #fleet .vehicle-content h3{color:var(--white-color)}
+        #fleet .vehicle-content p{color:var(--secondary-text-dark-bg)}
+        #fleet .vehicle-features{list-style:none;padding-left:0;margin-top:20px}
+        #fleet .vehicle-features li{color:var(--secondary-text-dark-bg);font-size:.95rem;line-height:1.6;display:flex;align-items:flex-start;margin-bottom:10px}
+        #fleet .vehicle-features li i{color:var(--button-bg-color);margin-right:12px;width:20px;text-align:center;margin-top:3px;flex-shrink:0}
+        #testimonials .testimonial-card{background-color:rgba(255,255,255,.05);border:1px solid var(--border-color-dark-bg);box-shadow:0 5px 20px var(--shadow-color-dark-bg)}
+        #testimonials .testimonial-card::before{color:var(--button-bg-color);opacity:.5}
+        #testimonials .testimonial-text{color:var(--primary-text-dark-bg)}
+        #testimonials .author-info h4{color:var(--white-color)}
+        #testimonials .author-info p{color:var(--button-bg-color)}
+        #testimonials .author-img{border-color:var(--button-bg-color)}
+        .section-header{text-align:center;margin-bottom:80px}
+        .section-header h2{font-size:3rem;margin-bottom:20px;font-weight:700;letter-spacing:1px}
+        .section-header p{max-width:750px;margin:0 auto;font-size:1.1rem}
+        .section-divider{width:70px;height:3px;background-color:var(--accent-color);margin:30px auto;border-radius:2px}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px}
+        .service-card{background-color:var(--white-color);border-radius:12px;overflow:hidden;transition:var(--transition);display:flex;flex-direction:column;border:1px solid var(--light-border-color);box-shadow:0 3px 10px var(--light-shadow-color)}
+        .service-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px var(--light-shadow-color)}
+        .service-img{height:220px;background-size:cover;background-position:center;filter:grayscale(50%) contrast(110%);transition:var(--transition)}
+        .service-card:hover .service-img{filter:grayscale(0) contrast(100%)}
+        .service-content{padding:35px;flex-grow:1;display:flex;flex-direction:column}
+        .service-content h3{font-size:1.6rem;margin-bottom:15px;color:var(--light-section-heading);font-family:var(--font-primary);font-weight:600}
+        .service-content p{color:var(--light-section-secondary-text);margin-bottom:25px;flex-grow:1;font-size:.95rem}
+        /* Removed .learn-more styles as the element is removed */
+        .fleet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:40px}
+        .vehicle-img{height:280px;background-size:cover;background-position:center;filter:brightness(.9) contrast(1.1);transition:var(--transition)}
+        .vehicle-card:hover .vehicle-img{filter:brightness(1) contrast(1)}
+        .vehicle-content{padding:35px;flex-grow:1}
+        .vehicle-features{list-style:none;padding-left:0;margin-top:20px}
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+        .about-img{border-radius:12px;overflow:hidden;box-shadow:0 20px 60px var(--light-shadow-color);position:relative}
+        .about-img img{width:100%;height:auto;display:block;filter:grayscale(20%)}
+        .about-content h2{font-size:3rem;margin-bottom:20px;color:var(--light-section-heading);font-weight:700}
+        .about-divider{width:80px;height:3px;background-color:var(--accent-color);margin:30px 0;border-radius:2px}
+        .about-content p{margin-bottom:25px;color:var(--light-section-secondary-text);font-size:1rem}
+        .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px}
+        .stat-item{text-align:center}
+        .stat-number{font-size:3.5rem;font-weight:700;color:var(--accent-color);margin-bottom:5px;font-family:var(--font-primary);display:inline-block}
+        .stat-label{font-size:.9rem;color:var(--light-section-secondary-text);font-weight:500;text-transform:uppercase;letter-spacing:1px}
+        .testimonial-card{border-radius:12px;padding:60px 70px;margin:0 auto;max-width:850px;position:relative}
+        .testimonial-card::before{content:'\f10d';font-family:'Font Awesome 6 Free';font-weight:900;font-size:60px;position:absolute;top:35px;left:35px;line-height:1}
+        .testimonial-text{font-size:1.25rem;line-height:1.8;margin-bottom:40px;position:relative;z-index:1;font-weight:300}
+        .testimonial-author{display:flex;align-items:center;justify-content:flex-start;padding-left:0}
+        .author-img{width:65px;height:65px;border-radius:50%;background-color:#ccc;margin-right:20px;background-size:cover;background-position:center;border:3px solid;flex-shrink:0}
+        .author-info{text-align:left}
+        .author-info h4{font-size:1.1rem;margin-bottom:5px;font-weight:600;font-family:var(--font-primary)}
+        .author-info p{font-size:.9rem;margin:0;font-style:normal}
+        .cta-content{max-width:750px;margin:0 auto;text-align:center}
+        .cta h2{font-size:3rem;margin-bottom:20px;color:var(--light-section-heading);font-weight:700}
+        .cta p{margin-bottom:45px;color:var(--light-section-secondary-text);font-size:1.1rem}
+        footer{background-color:var(--primary-bg);color:var(--primary-text-dark-bg);padding:100px 0 30px;position:relative;z-index:10;border-top:1px solid var(--border-color-dark-bg)}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:50px;margin-bottom:80px}
+        .footer-col h3{font-size:1.4rem;margin-bottom:30px;position:relative;padding-bottom:15px;font-weight:600;font-family:var(--font-primary);color:var(--white-color);letter-spacing:1px}
+        .footer-col h3::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:3px;background-color:var(--button-bg-color);border-radius:1px}
+        .footer-col p{color:var(--secondary-text-dark-bg);margin-bottom:20px;line-height:1.8;font-size:.95rem;font-weight:300}
+        .footer-links,.contact-info{list-style:none;padding:0}
+        .footer-links li{margin-bottom:15px}
+        .footer-links a{color:var(--secondary-text-dark-bg);text-decoration:none;transition:var(--transition);font-size:.95rem;font-weight:300}
+        .footer-links a:hover{color:#fff;padding-left:8px}
+        .contact-info li{display:flex;margin-bottom:18px;color:var(--secondary-text-dark-bg);align-items:flex-start;font-size:.95rem;font-weight:300}
+        .contact-info li i{margin-right:15px;color:var(--button-bg-color);width:20px;text-align:center;margin-top:4px;font-size:1rem;flex-shrink:0}
+        .contact-info li span{flex-grow:1}
+        .contact-info li a{color:inherit;text-decoration:none;transition:var(--transition)}
+        .contact-info li a:hover{color:var(--button-bg-color)}
+        .social-icons{display:flex;list-style:none;padding:0;margin-top:25px}
+        .social-icons li{margin-right:15px}
+        .social-icons a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,.05);color:var(--primary-text-dark-bg);text-decoration:none;transition:var(--transition);font-size:1rem;border:1px solid var(--border-color-dark-bg)}
+        .social-icons a:hover{background-color:var(--button-bg-color);border-color:var(--button-bg-color);color:var(--white-color);transform:translateY(-3px)}
+        .footer-bottom{border-top:1px solid var(--border-color-dark-bg);padding-top:30px;text-align:center;color:var(--secondary-text-dark-bg);font-size:.9rem;font-weight:300}
+        @media (max-width:992px){html{font-size:15px}.header-container{height:90px;padding:10px 20px}.logo img.logo-img{height:70px}.nav-toggle{display:block;order:3}.header-call-btn{order:2;margin-left:auto;margin-right:10px;padding:6px 18px;font-size:.85rem;transform:translateY(0)}.nav-menu{position:fixed;top:0;right:-100%;width:100%;height:100vh;z-index:1100;background-color:rgba(10,11,26,.98);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);flex-direction:column;align-items:center;justify-content:flex-start;padding-top:90px;transition:right .4s cubic-bezier(.25,.8,.25,1);overflow-y:auto;display:flex;border-left:1px solid var(--border-color-dark-bg);box-shadow:-5px 0 25px rgba(0,0,0,.3);margin-left:0;order:1}.nav-menu.active{right:0}.nav-menu li{margin:0;width:100%;text-align:center;opacity:0;transform:translateX(20px);transition:opacity .4s ease,transform .4s ease}.nav-menu.active li{opacity:1;transform:translateX(0)}.nav-menu.active li:nth-child(1){transition-delay:.1s}.nav-menu.active li:nth-child(2){transition-delay:.15s}.nav-menu.active li:nth-child(3){transition-delay:.2s}.nav-menu.active li:nth-child(4){transition-delay:.25s}.nav-menu.active li:nth-child(5){transition-delay:.3s}.nav-menu.active li:nth-child(6){transition-delay:.35s}.nav-menu a{display:block;padding:22px 25px;border-bottom:1px solid var(--border-color-dark-bg);width:100%;color:var(--primary-text-dark-bg);font-size:1.3rem;font-weight:500;transition:background-color .3s ease,color .3s ease;text-shadow:none}.nav-menu a::after{display:none}.nav-menu li:last-child a{border-bottom:none}.nav-menu a:hover{background-color:rgba(1,90,162,.1);color:var(--white-color)}.hero .container{padding-top:90px}.section{padding:100px 0}.about-grid{grid-template-columns:1fr;gap:40px}.about-img{order:-1;margin-bottom:40px}.stats-grid{grid-template-columns:repeat(2,1fr);gap:25px}.fleet-grid{grid-template-columns:1fr}.footer-grid{gap:40px}.hero h1{font-size:3.5rem}.hero p{font-size:1.1rem}.section-header h2,.about-content h2,.cta h2{font-size:2.6rem}.testimonial-card{padding:50px 40px}#fleet .vehicle-features{grid-template-columns:1fr}}
+        @media (max-width:768px){html{font-size:14px}.container{padding:0 20px}.header-container{height:90px;padding:10px 15px}.logo img.logo-img{height:70px}.nav-menu{padding-top:90px}.header-call-btn{padding:5px 15px;font-size:.8rem}.nav-menu a{font-size:1.2rem;padding:20px 25px}.hero .container{padding-top:90px}.hero h1{font-size:2.8rem}.hero p{font-size:1.05rem}.section{padding:80px 0}.section-header{margin-bottom:60px}.section-header h2,.about-content h2,.cta h2{font-size:2.2rem}.testimonial-card{padding:40px 30px}.testimonial-card::before{font-size:45px;top:25px;left:25px}.testimonial-author{flex-direction:column;text-align:center}.author-img{margin-right:0;margin-bottom:15px;width:60px;height:60px}.footer-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.btn{padding:14px 35px;font-size:.85rem;letter-spacing:1.2px}}
+        @media (max-width:576px){.header-container{height:90px;padding:10px 15px}.logo img.logo-img{height:70px}.nav-menu{padding-top:90px}.header-call-btn{padding:5px 12px;font-size:.75rem;margin-right:5px}.nav-toggle{margin-left:5px}.nav-menu a{font-size:1.15rem;padding:18px 20px}.hero .container{padding-top:90px}.hero h1{font-size:2.2rem}.hero p{font-size:1rem}.hero .btn{padding:12px 30px;font-size:.8rem}.hero-buttons .btn{display:block;width:90%;max-width:300px;margin:20px auto 0}.hero-buttons .btn-outline{margin-left:auto;margin-right:auto}.section{padding:60px 0}.section-header{margin-bottom:50px}.section-header h2,.about-content h2,.cta h2{font-size:2rem}.services-grid{grid-template-columns:1fr;gap:30px}.stats-grid{grid-template-columns:1fr;gap:35px}.stat-number{font-size:3rem}footer{padding:60px 0 20px}.footer-grid{grid-template-columns:1fr;text-align:center}.footer-col h3::after{left:50%;transform:translateX(-50%)}.contact-info li{justify-content:center;text-align:left}.contact-info li i{margin-top:2px}.social-icons{justify-content:center}.testimonial-card{padding:35px 20px}.testimonial-text{font-size:1.1rem}}
+        @media (min-width:993px){.nav-toggle{display:none!important}.header-container{height:95px}.logo img.logo-img{height:75px}.header-call-btn{margin-left:40px;margin-right:0;order:0;transform:translateY(0)}.nav-menu{position:static!important;right:auto!important;top:auto!important;width:auto!important;height:auto!important;background-color:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;flex-direction:row!important;padding-top:0!important;overflow-y:visible!important;transition:none!important;align-items:center!important;border-left:none!important;box-shadow:none!important;margin-left:0!important;order:0;z-index:auto}.nav-menu li{margin:0 0 0 45px!important;width:auto!important;text-align:left!important;opacity:1!important;transform:none!important;transition:none!important}.nav-menu a{display:inline-block!important;padding:0 0 5px 0!important;border-bottom:none!important;width:auto!important;color:var(--primary-text-dark-bg)!important;background-color:transparent!important;font-size:1.05rem!important;font-weight:500!important}.nav-menu a::after{display:block!important}.nav-menu.active{right:auto!important}.hero .container{padding-top:95px!important}.hero-buttons .btn{display:inline-block!important;width:auto!important;max-width:none!important;margin:0!important}.hero-buttons .btn-outline{margin-left:25px!important}}
     </style>
 </head>
 <body>
-    <header id="main-header" class="">
-        <div class="header-container">
-            <!-- === Logo Image === -->
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="Statesman Coaches Logo" class="logo-img" onerror="this.style.display='none'; this.parentElement.innerHTML = 'STATESMAN';"> <!-- Basic text fallback -->
+    <header id=main-header class="">
+        <div class=header-container>
+            <a href=#home class=logo>
+                <img src=logo.png alt="Statesman Coaches Logo" class=logo-img onerror="this.style.display='none'; this.parentElement.innerHTML = 'STATESMAN';">
             </a>
-            <!-- === End Logo Image === -->
-
-            <!-- Navigation Menu -->
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#fleet">Fleet</a></li>
-                <li><a href="#about">About Us</a></li> <!-- Changed from About -->
-                <li><a href="#testimonials">Clients</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class=nav-menu id=nav-menu>
+                <li><a href=#home>Home</a></li>
+                <li><a href=#services>Services</a></li>
+                <li><a href=#fleet>Fleet</a></li>
+                <li><a href=#about>About Us</a></li>
+                <li><a href=#testimonials>Clients</a></li>
+                <li><a href=#contact>Contact</a></li>
             </ul>
-
-            <!-- Call Us Button (Moved After Menu) -->
-            <!-- *** PHONE NUMBER UPDATED HERE *** -->
-            <a href="tel:+15044507420" class="btn header-call-btn">Call Us</a>
-
-            <!-- Mobile Nav Toggle -->
-            <button class="nav-toggle" id="nav-toggle" aria-label="Menu Toggle" aria-expanded="false">
-                 <i class="fas fa-bars"></i>
-             </button>
+            <a href=tel:+15044507420 class="btn header-call-btn">Call Us</a>
+            <button class=nav-toggle id=nav-toggle aria-label="Menu Toggle" aria-expanded=false>
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <video autoplay="" loop="" muted="" playsinline="" id="hero-video" poster="videoplaceholder.jpg">
-            <source src="hero.mp4" type="video/mp4">
+    <section id=home class=hero>
+        <video autoplay loop muted playsinline id=hero-video poster=videoplaceholder.jpg>
+            <source src=hero.mp4 type=video/mp4>
             Your browser does not support the video tag.
         </video>
-        <div class="hero-overlay"></div>
-        <div class="container" id="hero-container" style="padding-top: 95px;"> <!-- Initial desktop padding -->
-            <div class="hero-content">
-                <!-- UPDATED HERO CONTENT -->
+        <div class=hero-overlay></div>
+        <div class=container id=hero-container style=padding-top:95px>
+            <div class=hero-content>
                 <h1>The Benchmark in Luxury Transportation</h1>
                 <p>Experience unparalleled service, punctuality, and professionalism. We provide exquisite journeys, seamlessly integrated with discreet, expert security for complete peace of mind.</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn">Explore Our Services</a>
-                    <!-- UPDATED BUTTON TEXT -->
-                    <a href="#contact" class="btn btn-outline">Request a Quote</a>
+                <div class=hero-buttons>
+                    <a href=#services class=btn>Explore Our Services</a>
+                    <a href=#contact class="btn btn-outline">Request a Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="section">
-        <div class="container">
-            <div class="section-header">
-                <!-- UPDATED SECTION HEADER -->
+    <section id=services class=section>
+        <div class=container>
+            <div class=section-header>
                 <h2>Our Signature Services</h2>
-                <div class="section-divider"></div>
-                <p>Exceeding expectations with every journey. Discover our suite of premium transportation and integrated security services, tailored for discerning clientele.</p>
+                <div class=section-divider></div>
+                <p>Exceeding expectations with every journey. Discover our suite of premium transportation and integrated security services. Please call us to discuss your specific needs.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1591088843076-756576c19d62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Luxury+Transport\')'"></div>
-                    <div class="service-content">
-                        <!-- UPDATED SERVICE CARD (Luxury Transport First) -->
+            <div class=services-grid>
+                <div class=service-card>
+                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1591088843076-756576c19d62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Luxury+Transport\')'"></div>
+                    <div class=service-content>
                         <h3>Premier Luxury Transportation</h3>
                         <p>Travel in unparalleled comfort and style. Our premium fleet and professional, punctual chauffeurs guarantee a flawless, reliable experience, every time.</p>
-                        <a href="#fleet" class="learn-more">View Our Fleet <span>→</span></a>
+                        <!-- Removed learn-more link -->
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Executive+Protection\')'"></div>
-                    <div class="service-content">
-                        <!-- UPDATED SERVICE CARD (Executive Protection) -->
+                <div class=service-card>
+                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Executive+Protection\')'"></div>
+                    <div class=service-content>
                         <h3>Integrated Executive Security</h3>
                         <p>Discreet, personalized security solutions providing peace of mind, expertly woven into your travel arrangements for seamless protection.</p>
-                        <a href="#contact" class="learn-more">Learn More <span>→</span></a>
+                        <!-- Removed learn-more link -->
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Corporate+Travel\')'"></div>
-                    <div class="service-content">
-                         <!-- UPDATED SERVICE CARD (Corporate Travel) -->
+                <div class=service-card>
+                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Corporate+Travel\')'"></div>
+                    <div class=service-content>
                         <h3>Executive & Corporate Travel</h3>
                         <p>Punctual, reliable, and sophisticated transportation management for executive teams, roadshows, airport transfers, and critical corporate needs.</p>
-                        <a href="#contact" class="learn-more">Discuss Solutions <span>→</span></a>
+                        <!-- Removed learn-more link -->
                     </div>
                 </div>
-                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Event+Transport\')'"></div>
-                    <div class="service-content">
-                        <!-- UPDATED SERVICE CARD (Events) -->
+                <div class=service-card>
+                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Event+Transport\')'"></div>
+                    <div class=service-content>
                         <h3>Special Event Transportation</h3>
-                        <!-- *** THIS PARAGRAPH IS UPDATED WITH THE REQUESTED DETAILS *** -->
                         <p>Make every occasion unforgettable. We provide seamless, elegant transportation for proms, weddings, corporate gatherings, private parties, and major New Orleans events including Jazz Fest, Mardi Gras parades, concerts, Saints games, and more.</p>
-                        <a href="#contact" class="learn-more">Plan Your Event <span>→</span></a>
+                        <!-- Removed learn-more link -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="fleet" class="section fleet"> <!-- Background color applied via CSS -->
-        <div class="container">
-            <div class="section-header">
-                <!-- UPDATED SECTION HEADER -->
-                <h2>Our Exquisite Fleet</h2> <!-- Text color adjusted via CSS -->
-                <div class="section-divider"></div> <!-- Color adjusted via CSS -->
-                <p>Discover vehicles where luxury meets sophistication. Each meticulously maintained and appointed for your ultimate comfort, safety, and style.</p> <!-- Text color adjusted via CSS -->
+    <section id=fleet class="section fleet">
+        <div class=container>
+            <div class=section-header>
+                <h2>Our Exquisite Fleet</h2>
+                <div class=section-divider></div>
+                <p>Discover vehicles where luxury meets sophistication. Each meticulously maintained and appointed for your ultimate comfort, safety, and style.</p>
             </div>
-            <div class="fleet-grid">
-                <div class="vehicle-card"> <!-- Card style adjusted via CSS -->
-                     <div class="vehicle-img" style="background-image: url('denali.png');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=GMC+Denali\')'"></div>
-                    <div class="vehicle-content">
-                        <h3>GMC Yukon Denali XL</h3> <!-- Text color adjusted via CSS -->
-                        <!-- UPDATED DESCRIPTION -->
-                        <p>Spacious elegance and premium amenities define the Denali XL experience, perfect for executive travel or small groups seeking comfort.</p> <!-- Text color adjusted via CSS -->
-                        <ul class="vehicle-features">
+            <div class=fleet-grid>
+                <div class=vehicle-card>
+                    <div class=vehicle-img style="background-image:url(denali.png)" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=GMC+Denali\')'"></div>
+                    <div class=vehicle-content>
+                        <h3>GMC Yukon Denali XL</h3>
+                        <p>Spacious elegance and premium amenities define the Denali XL experience, perfect for executive travel or small groups seeking comfort.</p>
+                        <ul class=vehicle-features>
                             <li><i class="fas fa-couch"></i> Premium leather seating</li>
                             <li><i class="fas fa-expand-arrows-alt"></i> Extra-large cabin space</li>
                             <li><i class="fas fa-user-tie"></i> Captain’s chairs for maximum comfort</li>
@@ -917,13 +240,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="vehicle-card"> <!-- Card style adjusted via CSS -->
-                     <div class="vehicle-img" style="background-image: url('sprinter.png');" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Mercedes+Sprinter\')'"></div>
-                    <div class="vehicle-content">
-                        <h3>Mercedes-Benz Sprinter</h3> <!-- Text color adjusted via CSS -->
-                        <!-- UPDATED DESCRIPTION -->
-                        <p>The ultimate mobile lounge experience. Our fully equipped Sprinter offers high-end features for entertainment, relaxation, or productivity on the move.</p> <!-- Text color adjusted via CSS -->
-                        <ul class="vehicle-features">
+                <div class=vehicle-card>
+                    <div class=vehicle-img style="background-image:url(sprinter.png)" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Mercedes+Sprinter\')'"></div>
+                    <div class=vehicle-content>
+                        <h3>Mercedes-Benz Sprinter</h3>
+                        <p>The ultimate mobile lounge experience. Our fully equipped Sprinter offers high-end features for entertainment, relaxation, or productivity on the move.</p>
+                        <ul class=vehicle-features>
                             <li><i class="fas fa-volume-up"></i> JL Audio surround sound system with 10” subwoofer</li>
                             <li><i class="fas fa-couch"></i> Plush leather seating for ultimate comfort</li>
                             <li><i class="fas fa-tv"></i> Two 40” TVs for immersive viewing</li>
@@ -937,261 +259,121 @@
         </div>
     </section>
 
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <!-- UPDATED ABOUT SECTION -->
+    <section id=about class="section about">
+        <div class=container>
+            <div class=about-grid>
+                <div class=about-content>
                     <h2>The Statesman Standard of Excellence</h2>
-                    <div class="about-divider"></div>
+                    <div class=about-divider></div>
                     <p>Built on a foundation of absolute discretion, unwavering reliability, and operational excellence. Statesman Coaches is dedicated to delivering truly premium transportation experiences.</p>
                     <p>Our professional team combines meticulous attention to detail with a commitment to punctuality and safety, ensuring every journey is seamless and sophisticated. While leveraging expertise in security logistics, our primary focus is your comfort and satisfaction.</p>
-                    <div class="stats-grid">
-                        <!-- Stats updated to reflect service focus where applicable -->
-                        <div class="stat-item"> <div class="stat-number">15+</div> <div class="stat-label">Years Experience</div> </div>
-                        <div class="stat-item"> <div class="stat-number">100%</div> <div class="stat-label">On-Time Record*</div> </div> <!-- Added On-Time Record -->
-                        <div class="stat-item"> <div class="stat-number">500+</div> <div class="stat-label">Satisfied Clients</div> </div> <!-- Changed from Profiles/Mission Success -->
+                    <div class=stats-grid>
+                        <div class=stat-item>
+                            <div class=stat-number>15+</div>
+                            <div class=stat-label>Years Experience</div>
+                        </div>
+                        <div class=stat-item>
+                            <div class=stat-number>100%</div>
+                            <div class=stat-label>On-Time Record*</div>
+                        </div>
+                        <div class=stat-item>
+                            <div class=stat-number>500+</div>
+                            <div class=stat-label>Satisfied Clients</div>
+                        </div>
                     </div>
-                     <p style="font-size: 0.8rem; margin-top: 15px; color: var(--light-section-secondary-text);">*Based on standard operating conditions.</p> <!-- Added footnote for On-Time -->
+                    <p style="font-size:.8rem;margin-top:15px;color:var(--light-section-secondary-text)">*Based on standard operating conditions.</p>
                 </div>
-                <div class="about-img">
-                     <img src="https://placehold.co/600x450/ffffff/eeeeee?text=Professional+Service" alt="Professional chauffeur team and luxury vehicle" onerror="this.onerror=null; this.src='https://placehold.co/600x450/ffffff/eeeeee?text=Professional+Service';"> <!-- Updated placeholder text -->
+                <div class=about-img>
+                    <img src="https://placehold.co/600x450/ffffff/eeeeee?text=Professional+Service" alt="Professional chauffeur team and luxury vehicle" onerror="this.onerror=null; this.src='https://placehold.co/600x450/ffffff/eeeeee?text=Professional+Service';">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="section testimonials"> <!-- Background color applied via CSS -->
-        <div class="container">
-            <div class="section-header">
-                 <!-- UPDATED TESTIMONIALS HEADER -->
-                <h2>Trusted by the Discerning</h2> <!-- Text color adjusted via CSS -->
-                <div class="section-divider"></div> <!-- Color adjusted via CSS -->
-                <p>Hear from leaders who demand the absolute best in luxury transportation, reliability, and peace of mind.</p> <!-- Text color adjusted via CSS -->
+    <section id=testimonials class="section testimonials">
+        <div class=container>
+            <div class=section-header>
+                <h2>Trusted by the Discerning</h2>
+                <div class=section-divider></div>
+                <p>Hear from leaders who demand the absolute best in luxury transportation, reliability, and peace of mind.</p>
             </div>
-            <div class="testimonial-card"> <!-- Card style adjusted via CSS -->
-                 <!-- Testimonial text remains, but framed by the luxury context -->
-                <p class="testimonial-text">"In environments where failure is not an option, Statesman Coaches provides the strategic foresight and flawless execution necessary. Their integration of technology and human expertise is unmatched. They are an essential partner for reliable, high-standard travel."</p> <!-- Text color adjusted via CSS, slightly tweaked end -->
-                <div class="testimonial-author">
-                     <div class="author-img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');" onerror="this.style.backgroundImage='url(\'https://placehold.co/100x100/cccccc/aaaaaa?text=Client\')'"></div> <!-- Border color adjusted via CSS -->
-                    <div class="author-info">
-                        <h4>[Redacted]</h4> <!-- Text color adjusted via CSS -->
-                        <p>Fortune 10 Executive</p> <!-- Text color adjusted via CSS -->
+            <div class=testimonial-card>
+                <p class=testimonial-text>"In environments where failure is not an option, Statesman Coaches provides the strategic foresight and flawless execution necessary. Their integration of technology and human expertise is unmatched. They are an essential partner for reliable, high-standard travel."</p>
+                <div class=testimonial-author>
+                    <div class=author-img style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/100x100/cccccc/aaaaaa?text=Client\')'"></div>
+                    <div class=author-info>
+                        <h4>[Redacted]</h4>
+                        <p>Fortune 10 Executive</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section cta">
-        <div class="container">
-            <div class="cta-content">
-                <!-- UPDATED CTA SECTION -->
+    <section id=contact class="section cta">
+        <div class=container>
+            <div class=cta-content>
                 <h2>Arrange Your Premier Transportation</h2>
-                <div class="section-divider"></div>
+                <div class=section-divider></div>
                 <p>Contact our dedicated concierge team to discuss your specific travel requirements and receive a personalized quote. Experience the Statesman difference – punctual, professional, perfect.</p>
-                 <!-- *** EMAIL UPDATED HERE *** -->
-                 <!-- UPDATED BUTTON TEXT -->
-                <a href="mailto:info@statesmancoacheseps.com?subject=Premier Transportation Quote Request" class="btn">Request a Quote</a>
+                <a href="tel:+15044507420" class=btn>Call Us Now: (504) 450-7420</a>
+                <!-- Changed CTA button to direct call -->
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                     <!-- Footer Logo/Text - Keeping text for simplicity, but could be image too -->
-                     <h3 style="font-family: var(--font-primary); letter-spacing: 2px; color: var(--white-color);">STATESMAN</h3>
-                     <!-- UPDATED FOOTER DESCRIPTION -->
+        <div class=container>
+            <div class=footer-grid>
+                <div class=footer-col>
+                    <h3 style="font-family:var(--font-primary);letter-spacing:2px;color:var(--white-color)">STATESMAN</h3>
                     <p>Delivering exceptional luxury transportation and integrated security solutions with unparalleled professionalism and discretion.</p>
-                    <ul class="social-icons">
-                         <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                         <li><a href="#" aria-label="Secure Comms"><i class="fas fa-lock"></i></a></li> <!-- Keep for security aspect -->
-                         <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-                     </ul>
+                    <ul class=social-icons>
+                        <li><a href=# aria-label=LinkedIn><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=# aria-label="Secure Comms"><i class="fas fa-lock"></i></a></li>
+                        <li><a href=# aria-label=Twitter><i class="fab fa-twitter"></i></a></li>
+                    </ul>
                 </div>
-                <div class="footer-col">
-                     <!-- UPDATED FOOTER LINKS TITLE -->
+                <div class=footer-col>
                     <h3>Our Services</h3>
-                    <ul class="footer-links">
-                        <!-- UPDATED LINKS TO MATCH SERVICES -->
-                        <li><a href="#fleet">Luxury Transportation</a></li>
-                        <li><a href="#services">Executive & Corporate</a></li>
-                        <li><a href="#services">Special Event Transport</a></li>
-                        <li><a href="#services">Integrated Security</a></li>
-                        <li><a href="#contact">Airport Transfers</a></li>
-                        <li><a href="#contact">Bespoke Itineraries</a></li>
+                    <ul class=footer-links>
+                        <li><a href=#fleet>Luxury Transportation</a></li>
+                        <li><a href=#services>Executive & Corporate</a></li>
+                        <li><a href=#services>Special Event Transport</a></li>
+                        <li><a href=#services>Integrated Security</a></li>
+                        <li><a href=#contact>Airport Transfers</a></li>
+                        <li><a href=#contact>Bespoke Itineraries</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class=footer-col>
                     <h3>Navigate</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li> <!-- Changed from Protocol -->
-                        <li><a href="#services">Services</a></li> <!-- Changed from Capabilities -->
-                        <li><a href="#fleet">Fleet</a></li>
-                        <li><a href="#testimonials">Client Testimonials</a></li> <!-- Changed from Client Intel -->
-                        <li><a href="#contact">Contact</a></li>
+                    <ul class=footer-links>
+                        <li><a href=#home>Home</a></li>
+                        <li><a href=#about>About Us</a></li>
+                        <li><a href=#services>Services</a></li>
+                        <li><a href=#fleet>Fleet</a></li>
+                        <li><a href=#testimonials>Client Testimonials</a></li>
+                        <li><a href=#contact>Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                     <!-- UPDATED FOOTER CONTACT TITLE -->
+                <div class=footer-col>
                     <h3>Contact Information</h3>
-                    <ul class="contact-info">
-                        <!-- *** ADDRESS UPDATED HERE *** -->
+                    <ul class=contact-info>
                         <li><i class="fas fa-map-marker-alt"></i> <span>7061 Ring Neck Drive<br>Madisonville, LA 70447</span></li>
-                        <!-- *** PHONE NUMBER UPDATED HERE *** -->
-                        <li><i class="fas fa-phone-alt"></i> <span><a href="tel:+15044507420">(504) 450-7420</a></span></li>
-                        <!-- *** EMAIL UPDATED HERE *** -->
-                        <li><i class="fas fa-envelope"></i> <span><a href="mailto:info@statesmancoacheseps.com">info@statesmancoacheseps.com</a></span></li>
-                        <li><i class="fas fa-clock"></i> <span>24/7 Availability for Bookings</span></li> <!-- Changed from Security Desk -->
+                        <li><i class="fas fa-phone-alt"></i> <span><a href=tel:+15044507420>(504) 450-7420</a></span></li>
+                        <li><i class="fas fa-envelope"></i> <span><a href=mailto:info@statesmancoacheseps.com>info@statesmancoacheseps.com</a></span></li>
+                        <li><i class="fas fa-clock"></i> <span>24/7 Availability for Bookings</span></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                 <!-- *** BUSINESS NAME UPDATED HERE *** -->
-                 <!-- UPDATED FOOTER TAGLINE -->
-                <p>© <span id="current-year">2025</span> Statesman Coaches and Executive Protection Services LLC. All Rights Reserved. Defining Premier Transportation.</p>
+            <div class=footer-bottom>
+                <p>© <span id=current-year>2025</span> Statesman Coaches and Executive Protection Services LLC. All Rights Reserved. Defining Premier Transportation.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // JAVASCRIPT REMAINS THE SAME - Controls functionality like menu toggle, scroll effects, etc.
-        // No changes needed here for the content re-focus.
-        document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.getElementById('nav-toggle');
-            const navMenu = document.getElementById('nav-menu');
-            const navLinks = navMenu.querySelectorAll('a');
-            const header = document.getElementById('main-header');
-            const headerContainer = header.querySelector('.header-container');
-            const heroContainer = document.getElementById('hero-container');
-            const navToggleIcon = navToggle ? navToggle.querySelector('i') : null;
-
-            function getCurrentHeaderHeight() {
-                if (!headerContainer) return 95; // Default desktop height
-                if (window.innerWidth < 993) {
-                    return 90; // New mobile height
-                } else {
-                    return 95; // Desktop height
-                }
-            }
-
-            const mobileBreakpoint = 992;
-
-            function updateHeroPadding() {
-                const currentHeaderHeight = getCurrentHeaderHeight();
-                if (heroContainer) {
-                     heroContainer.style.paddingTop = `${currentHeaderHeight}px`;
-                 }
-            }
-
-            function closeMobileMenu() {
-                 if (!navMenu || !navToggle || !navToggleIcon) return;
-                navMenu.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-                navToggleIcon.classList.replace('fa-times', 'fa-bars');
-                document.body.style.overflow = ''; // Allow body scrolling
-            }
-
-            function openMobileMenu() {
-                if (!navMenu || !navToggle || !navToggleIcon) return;
-                navMenu.classList.add('active');
-                navToggle.setAttribute('aria-expanded', 'true');
-                navToggleIcon.classList.replace('fa-bars', 'fa-times');
-                document.body.style.overflow = 'hidden'; // Prevent body scrolling when menu is open
-            }
-
-            updateHeroPadding(); // Initial call
-            window.addEventListener('resize', updateHeroPadding); // Update on resize
-
-            if (navToggle && navMenu && navToggleIcon) {
-                navToggle.addEventListener('click', function() {
-                    if (navMenu.classList.contains('active')) {
-                        closeMobileMenu();
-                    } else {
-                        openMobileMenu();
-                    }
-                });
-            } else {
-                 console.error("Navigation elements (toggle, menu, or icon) not found.");
-            }
-
-            // Close menu when a link is clicked
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    if (window.innerWidth <= mobileBreakpoint && navMenu && navMenu.classList.contains('active')) {
-                        closeMobileMenu();
-                    }
-                    // Smooth scroll logic
-                    const targetId = this.getAttribute('href');
-                    if (targetId && targetId.length > 1 && targetId.startsWith('#')) {
-                        const targetElement = document.getElementById(targetId.substring(1));
-                        if (targetElement) {
-                            event.preventDefault();
-                            let currentHeaderHeight = getCurrentHeaderHeight();
-                            const elementPosition = targetElement.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - currentHeaderHeight;
-
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    } else if (targetId === '#') {
-                         event.preventDefault();
-                         window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }
-                });
-            });
-
-            // Close menu if clicked outside
-            document.addEventListener('click', function(event) {
-                if (window.innerWidth <= mobileBreakpoint && navMenu && navMenu.classList.contains('active')) {
-                    const isClickInsideMenu = navMenu.contains(event.target);
-                    const isClickOnToggle = navToggle ? navToggle.contains(event.target) : false;
-                    if (!isClickInsideMenu && !isClickOnToggle) {
-                        closeMobileMenu();
-                    }
-                }
-            });
-
-
-             const yearSpan = document.getElementById('current-year');
-             if(yearSpan) {
-                 yearSpan.textContent = new Date().getFullYear();
-             } else {
-                 console.error("Element with ID 'current-year' not found.");
-             }
-
-            const scrollThreshold = 50;
-
-            function handleScroll() {
-                 if (!header) return;
-                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                 if (scrollTop > scrollThreshold) {
-                     header.classList.add('header-scrolled');
-                 } else {
-                     header.classList.remove('header-scrolled');
-                 }
-            }
-
-            handleScroll(); // Initial check
-            window.addEventListener('scroll', handleScroll, { passive: true });
-
-            const heroVideo = document.getElementById('hero-video');
-            if (heroVideo) {
-                heroVideo.addEventListener('error', (e) => {
-                    console.error('Hero video error:', e);
-                });
-                heroVideo.addEventListener('stalled', () => {
-                    console.warn('Hero video stalled (network issue?)');
-                });
-            }
-        });
+        document.addEventListener('DOMContentLoaded',function(){const n=document.getElementById('nav-toggle'),m=document.getElementById('nav-menu'),l=m.querySelectorAll('a'),h=document.getElementById('main-header'),hc=h.querySelector('.header-container'),he=document.getElementById('hero-container'),ni=n?n.querySelector('i'):null,b=992;function g(){return hc?window.innerWidth<993?90:95:95}function u(){const t=g();he&&(he.style.paddingTop=`${t}px`)}function c(){m&&n&&ni&&(m.classList.remove('active'),n.setAttribute('aria-expanded','false'),ni.classList.replace('fa-times','fa-bars'),document.body.style.overflow='')}function o(){m&&n&&ni&&(m.classList.add('active'),n.setAttribute('aria-expanded','true'),ni.classList.replace('fa-bars','fa-times'),document.body.style.overflow='hidden')}u(),window.addEventListener('resize',u),n&&m&&ni&&n.addEventListener('click',function(){m.classList.contains('active')?c():o()}),l.forEach(e=>{e.addEventListener('click',function(t){if(window.innerWidth<=b&&m&&m.classList.contains('active')&&c(),this.getAttribute('href')){const e=this.getAttribute('href');if(e&&e.length>1&&e.startsWith('#')){const i=document.getElementById(e.substring(1));if(i){t.preventDefault();let n=g(),s=i.getBoundingClientRect().top,d=s+window.pageYOffset-n;window.scrollTo({top:d,behavior:'smooth'})}}else'#'===e&&(t.preventDefault(),window.scrollTo({top:0,behavior:'smooth'}))}})}),document.addEventListener('click',function(t){window.innerWidth<=b&&m&&m.classList.contains('active')&&!m.contains(t.target)&&(!n||!n.contains(t.target))&&c()});const y=document.getElementById('current-year');y&&(y.textContent=(new Date).getFullYear());const s=50;function hs(){if(!h)return;let t=window.pageYOffset||document.documentElement.scrollTop;t>s?h.classList.add('header-scrolled'):h.classList.remove('header-scrolled')}hs(),window.addEventListener('scroll',hs,{passive:!0});const v=document.getElementById('hero-video');v&&v.addEventListener('error',t=>{}),v&&v.addEventListener('stalled',()=>{})})
     </script>
-
 </body>
 </html>
