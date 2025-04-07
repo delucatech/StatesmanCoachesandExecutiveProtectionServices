@@ -76,14 +76,27 @@
         .section-header p{max-width:750px;margin:0 auto;font-size:1.1rem}
         .section-divider{width:70px;height:3px;background-color:var(--accent-color);margin:30px auto;border-radius:2px}
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px}
-        .service-card{background-color:var(--white-color);border-radius:12px;overflow:hidden;transition:var(--transition);display:flex;flex-direction:column;border:1px solid var(--light-border-color);box-shadow:0 3px 10px var(--light-shadow-color)}
-        .service-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px var(--light-shadow-color)}
-        .service-img{height:220px;background-size:cover;background-position:center;filter:grayscale(50%) contrast(110%);transition:var(--transition)}
-        .service-card:hover .service-img{filter:grayscale(0) contrast(100%)}
-        .service-content{padding:35px;flex-grow:1;display:flex;flex-direction:column}
-        .service-content h3{font-size:1.6rem;margin-bottom:15px;color:var(--light-section-heading);font-family:var(--font-primary);font-weight:600}
-        .service-content p{color:var(--light-section-secondary-text);margin-bottom:25px;flex-grow:1;font-size:.95rem}
-        /* Removed .learn-more styles as the element is removed */
+        /* Removed service-card specific styles as they are no longer used in the same way */
+        /* Styles for the new informational layout in services section */
+        .service-info-item {
+            padding: 25px; /* Add some padding */
+            border: 1px solid var(--light-border-color); /* Optional border */
+            border-radius: 8px; /* Optional rounded corners */
+            background-color: #f9f9f9; /* Slightly different background */
+        }
+        .service-info-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--light-section-heading);
+            font-family: var(--font-primary);
+            font-weight: 600;
+        }
+        .service-info-item p {
+            color: var(--light-section-secondary-text);
+            margin-bottom: 0; /* Remove bottom margin as there's no button */
+            font-size: .95rem;
+        }
+        /* End of new service styles */
         .fleet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:40px}
         .vehicle-img{height:280px;background-size:cover;background-position:center;filter:brightness(.9) contrast(1.1);transition:var(--transition)}
         .vehicle-card:hover .vehicle-img{filter:brightness(1) contrast(1)}
@@ -182,37 +195,21 @@
                 <p>Exceeding expectations with every journey. Discover our suite of premium transportation and integrated security services. Please call us to discuss your specific needs.</p>
             </div>
             <div class=services-grid>
-                <div class=service-card>
-                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1591088843076-756576c19d62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Luxury+Transport\')'"></div>
-                    <div class=service-content>
-                        <h3>Premier Luxury Transportation</h3>
-                        <p>Travel in unparalleled comfort and style. Our premium fleet and professional, punctual chauffeurs guarantee a flawless, reliable experience, every time.</p>
-                        <!-- Removed learn-more link -->
-                    </div>
+                <div class="service-info-item">
+                    <h3>Premier Luxury Transportation</h3>
+                    <p>Travel in unparalleled comfort and style. Our premium fleet and professional, punctual chauffeurs guarantee a flawless, reliable experience, every time.</p>
                 </div>
-                <div class=service-card>
-                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Executive+Protection\')'"></div>
-                    <div class=service-content>
-                        <h3>Integrated Executive Security</h3>
-                        <p>Discreet, personalized security solutions providing peace of mind, expertly woven into your travel arrangements for seamless protection.</p>
-                        <!-- Removed learn-more link -->
-                    </div>
+                <div class="service-info-item">
+                    <h3>Integrated Executive Security</h3>
+                    <p>Discreet, personalized security solutions providing peace of mind, expertly woven into your travel arrangements for seamless protection.</p>
                 </div>
-                <div class=service-card>
-                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Corporate+Travel\')'"></div>
-                    <div class=service-content>
-                        <h3>Executive & Corporate Travel</h3>
-                        <p>Punctual, reliable, and sophisticated transportation management for executive teams, roadshows, airport transfers, and critical corporate needs.</p>
-                        <!-- Removed learn-more link -->
-                    </div>
+                <div class="service-info-item">
+                    <h3>Executive & Corporate Travel</h3>
+                    <p>Punctual, reliable, and sophisticated transportation management for executive teams, roadshows, airport transfers, and critical corporate needs.</p>
                 </div>
-                <div class=service-card>
-                    <div class=service-img style="background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80')" onerror="this.style.backgroundImage='url(\'https://placehold.co/600x400/ffffff/eeeeee?text=Event+Transport\')'"></div>
-                    <div class=service-content>
-                        <h3>Special Event Transportation</h3>
-                        <p>Make every occasion unforgettable. We provide seamless, elegant transportation for proms, weddings, corporate gatherings, private parties, and major New Orleans events including Jazz Fest, Mardi Gras parades, concerts, Saints games, and more.</p>
-                        <!-- Removed learn-more link -->
-                    </div>
+                <div class="service-info-item">
+                    <h3>Special Event Transportation</h3>
+                    <p>Make every occasion unforgettable. We provide seamless, elegant transportation for proms, weddings, corporate gatherings, private parties, and major New Orleans events including Jazz Fest, Mardi Gras parades, concerts, Saints games, and more.</p>
                 </div>
             </div>
         </div>
@@ -317,7 +314,7 @@
                 <div class=section-divider></div>
                 <p>Contact our dedicated concierge team to discuss your specific travel requirements and receive a personalized quote. Experience the Statesman difference – punctual, professional, perfect.</p>
                 <a href="tel:+15044507420" class=btn>Call Us Now: (504) 450-7420</a>
-                <!-- Changed CTA button to direct call -->
+                <!-- Changed the button text and link to direct call -->
             </div>
         </div>
     </section>
