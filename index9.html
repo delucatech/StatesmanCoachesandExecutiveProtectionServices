@@ -93,12 +93,11 @@
             border: none;
             box-shadow: none;
         }
-        /* Apply general shadow/border to other service images */
         .service-row:not(:first-child) .service-image-col img {
              box-shadow: 0 10px 30px var(--light-shadow-color);
-             object-fit: cover; /* Revert to cover for others if desired */
-             aspect-ratio: 4 / 3; /* Revert aspect ratio */
-             max-height: none; /* Remove max-height for others */
+             object-fit: cover;
+             aspect-ratio: 4 / 3;
+             max-height: none;
         }
         .service-text-col h3{font-size:2rem;margin-bottom:20px;color:var(--light-section-heading);font-family:var(--font-primary);font-weight:600}
         .service-text-col p{color:var(--light-section-secondary-text);font-size:1rem;line-height:1.8}
@@ -169,6 +168,7 @@
             .hero .container{padding-top:90px}
             .section{padding:100px 0}
             .about-grid{grid-template-columns:1fr;gap:40px}
+            .about-content { text-align: left; } /* Ensure about content is left aligned */
             .about-img{order:-1;margin-bottom:40px}
             .stats-grid{grid-template-columns:repeat(2,1fr);gap:25px}
             .fleet-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap: 40px;}
@@ -184,8 +184,8 @@
                 gap: 30px;
             }
             .service-image-col { order: 1; }
-            .service-text-col { order: 2; text-align: center; }
-             .service-text-col h3 { font-size: 1.8rem; }
+            .service-text-col { order: 2; text-align: left; } /* Changed from center to left */
+            .service-text-col h3 { font-size: 1.8rem; }
         }
 
         @media (max-width:768px){
@@ -204,11 +204,12 @@
             .section-header h2,.about-content h2,.cta h2{font-size:2.2rem}
             .testimonial-card{padding:40px 30px}
             .testimonial-card::before{font-size:45px;top:25px;left:25px}
-            .testimonial-author{flex-direction:column;text-align:center}
+            .testimonial-author{flex-direction:column;text-align:center} /* Testimonial author info centered */
+            .author-info { text-align: center; } /* Ensure author info text is centered */
             .author-img{margin-right:0;margin-bottom:15px;width:60px;height:60px}
             .footer-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
             .btn{padding:14px 35px;font-size:.85rem;letter-spacing:1.2px}
-             .service-text-col h3 { font-size: 1.6rem; }
+            .service-text-col h3 { font-size: 1.6rem; }
             .service-text-col p { font-size: 0.95rem; }
             #fleet .vehicle-content { padding: 30px; }
             #fleet .vehicle-content h3 { font-size: 1.4rem; }
@@ -234,16 +235,17 @@
             .stats-grid{grid-template-columns:1fr;gap:35px}
             .stat-number{font-size:3rem}
             footer{padding:60px 0 20px}
-            .footer-grid{grid-template-columns:1fr;text-align:center}
-            .footer-col h3::after{left:50%;transform:translateX(-50%)}
-            .contact-info li{justify-content:center;text-align:left}
-            .contact-info li i{margin-top:2px}
-            .social-icons{justify-content:center}
+            .footer-grid{grid-template-columns:1fr;} /* Removed text-align: center */
+            .footer-col h3 { text-align: center; } /* Center only the heading */
+            .footer-col h3::after{left:50%;transform:translateX(-50%)} /* Center the underline */
+            .footer-col p, .footer-col .footer-links, .footer-col .contact-info { text-align: left; } /* Ensure these are left-aligned */
+            .contact-info li{ text-align: left; } /* Removed justify-content: center */
+            .social-icons{justify-content:center} /* Keep social icons centered */
             .testimonial-card{padding:35px 20px}
             .testimonial-text{font-size:1.1rem}
-             .service-alternating-layout { gap: 50px; }
-             .fleet-grid{grid-template-columns: 1fr; gap: 30px;}
-             #fleet .vehicle-card:hover { transform: translateY(-8px); }
+            .service-alternating-layout { gap: 50px; }
+            .fleet-grid{grid-template-columns: 1fr; gap: 30px;}
+            #fleet .vehicle-card:hover { transform: translateY(-8px); }
         }
 
         @media (min-width:993px){
@@ -261,8 +263,13 @@
             .hero-buttons .btn-outline{margin-left:25px!important}
             .service-row { flex-direction: row; }
             .service-row:nth-child(even) { flex-direction: row-reverse; }
-            .service-text-col { text-align: left; }
+            .service-text-col { text-align: left; } /* Ensure left alignment on large screens */
+            .about-content { text-align: left; } /* Ensure left alignment on large screens */
             #fleet .vehicle-features{grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
+            .footer-col h3 { text-align: left; } /* Reset footer heading alignment */
+            .footer-col h3::after { left: 0; transform: none; } /* Reset footer underline */
+            .footer-col p, .footer-col .footer-links, .footer-col .contact-info { text-align: left; } /* Ensure left alignment */
+            .social-icons { justify-content: flex-start; } /* Reset social icon alignment */
         }
     </style>
 </head>
