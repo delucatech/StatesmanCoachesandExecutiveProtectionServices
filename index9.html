@@ -613,10 +613,11 @@
             const heroVideo = document.getElementById('hero-video');
             if (heroVideo) {
                 heroVideo.addEventListener('error', (e) => {
-                    console.warn("Hero video failed to load:", e);
+                    console.warn("Hero video failed to load or encountered an error:", e);
                 });
                  heroVideo.addEventListener('stalled', () => {
-                    console.warn("Hero video stalled.");
+                    console.warn("Hero video stalled (network issue?). Attempting to play again.");
+                    heroVideo.play().catch(e => console.warn("Retry play failed:", e));
                 });
             }
 
